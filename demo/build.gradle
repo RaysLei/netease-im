@@ -125,8 +125,8 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:1.1.0"
     // Java8 support for Lifecycles
     implementation "android.arch.lifecycle:common-java8:1.1.0"
-    compile project(path: ':rtskit')
+    api project(':rtskit')
 }
 
 
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'
