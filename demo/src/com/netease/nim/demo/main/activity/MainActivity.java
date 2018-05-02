@@ -21,6 +21,7 @@ import com.netease.nim.demo.contact.activity.AddFriendActivity;
 import com.netease.nim.demo.login.LoginActivity;
 import com.netease.nim.demo.login.LogoutHelper;
 import com.netease.nim.demo.main.fragment.HomeFragment;
+import com.netease.nim.demo.main.fragment.NewHomeFragment;
 import com.netease.nim.demo.session.SessionHelper;
 import com.netease.nim.demo.team.TeamCreateHelper;
 import com.netease.nim.demo.team.activity.AdvancedTeamSearchActivity;
@@ -55,7 +56,8 @@ public class MainActivity extends UI {
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int BASIC_PERMISSION_REQUEST_CODE = 100;
 
-    private HomeFragment mainFragment;
+//    private HomeFragment mainFragment;
+    private NewHomeFragment mainFragment;
 
     public static void start(Context context) {
         start(context, null);
@@ -258,7 +260,7 @@ public class MainActivity extends UI {
 
     private void showMainFragment() {
         if (mainFragment == null && !isDestroyedCompatible()) {
-            mainFragment = new HomeFragment();
+            mainFragment = new NewHomeFragment();
             switchFragmentContent(mainFragment);
         }
     }

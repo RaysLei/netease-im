@@ -58,11 +58,16 @@ public class MainTabPagerAdapter extends SlidingTabPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        MainTab tab = MainTab.fromTabIndex(position);
-
-        int resId = tab != null ? tab.resId : 0;
-
-        return resId != 0 ? context.getText(resId) : "";
+        return null;
     }
+
+//    @Override
+//    public CharSequence getPageTitle(int position) {
+//        MainTab tab = MainTab.fromTabIndex(position);
+//
+//        int resId = tab != null ? tab.resId : 0;
+//
+//        return resId != 0 ? context.getText(resId) : "";
+//    }
 
 }
