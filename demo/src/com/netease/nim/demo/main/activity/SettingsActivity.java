@@ -14,6 +14,7 @@ import com.netease.nim.avchatkit.AVChatKit;
 import com.netease.nim.demo.DemoCache;
 import com.netease.nim.demo.R;
 import com.netease.nim.demo.config.preference.UserPreferences;
+import com.netease.nim.demo.contact.activity.BlackListActivity;
 import com.netease.nim.demo.contact.activity.UserProfileSettingActivity;
 import com.netease.nim.demo.jsbridge.JsBridgeActivity;
 import com.netease.nim.demo.main.adapter.SettingsAdapter;
@@ -74,6 +75,8 @@ public class SettingsActivity extends UI implements SettingsAdapter.SwitchChange
     private static final int TAG_CLEAR_SDK_CACHE = 23; // 清除 sdk 文件缓存
 
     private static final int TAG_PUSH_SHOW_NO_DETAIL = 24; // 推送消息不展示详情
+    private static final int TAG_BLACK_LIST = 25; // 黑名单
+
     ListView listView;
     SettingsAdapter adapter;
     private List<SettingTemplate> items = new ArrayList<SettingTemplate>();
@@ -206,6 +209,9 @@ public class SettingsActivity extends UI implements SettingsAdapter.SwitchChange
 //        items.add(SettingTemplate.makeSeperator());
 
         items.add(SettingTemplate.makeSeperator());
+        items.add(new SettingTemplate(TAG_BLACK_LIST, "黑名单"));
+        items.add(SettingTemplate.addLine());
+
         items.add(new SettingTemplate(TAG_CLEAR, getString(R.string.about_clear_msg_history)));
         items.add(SettingTemplate.addLine());
         clearIndexItem = new SettingTemplate(TAG_CLEAR_INDEX, getString(R.string.clear_index), getIndexCacheSize() + " M");
@@ -267,6 +273,9 @@ public class SettingsActivity extends UI implements SettingsAdapter.SwitchChange
                 break;
             case TAG_JRMFWAllET:
                 NIMRedPacketClient.startWalletActivity(this);
+                break;
+            case TAG_BLACK_LIST: // 黑名单
+                BlackListActivity.start(SettingsActivity.this);
                 break;
             default:
                 break;
