@@ -1,11 +1,13 @@
 package com.netease.nim.demo.main.fragment;
 
+import android.app.Dialog;
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.view.ViewPager;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +19,15 @@ import com.netease.nim.demo.common.ui.viewpager.FadeInOutPageTransformer;
 import com.netease.nim.demo.contact.activity.AddFriendActivity;
 import com.netease.nim.demo.main.activity.MainActivity;
 import com.netease.nim.demo.main.adapter.MainTabPagerAdapter;
+import com.netease.nim.demo.main.dialog.ContactDialog;
 import com.netease.nim.demo.main.helper.SystemMessageUnreadManager;
 import com.netease.nim.demo.main.model.MainTab;
 import com.netease.nim.demo.main.reminder.ReminderItem;
 import com.netease.nim.demo.main.reminder.ReminderManager;
+import com.netease.nim.demo.team.activity.AdvancedTeamSearchActivity;
+import com.netease.nim.uikit.api.NimUIKit;
+import com.netease.nim.uikit.business.contact.selector.activity.ContactSelectActivity;
+import com.netease.nim.uikit.business.team.helper.TeamHelper;
 import com.netease.nim.uikit.common.fragment.TFragment;
 import com.netease.nim.uikit.common.ui.drop.DropCover;
 import com.netease.nim.uikit.common.ui.drop.DropManager;
@@ -32,6 +39,7 @@ import com.netease.nimlib.sdk.msg.SystemMessageObserver;
 import com.netease.nimlib.sdk.msg.SystemMessageService;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.RecentContact;
+import com.netease.nimlib.sdk.util.NIMUtil;
 
 /**
  * 云信主界面（导航页）
@@ -68,7 +76,7 @@ public class NewHomeFragment extends TFragment implements ReminderManager.Unread
         registerMsgUnreadInfoObserver(true);
         registerSystemMessageObservers(true);
         requestSystemMessageUnreadCount();
-//        initUnreadCover();
+        initUnreadCover();
     }
 
     /**
@@ -83,9 +91,32 @@ public class NewHomeFragment extends TFragment implements ReminderManager.Unread
         mTvTitle.setText(getString(R.string.home_conversation));
 
         mIvNavRight.setOnClickListener((view) -> {
-            AddFriendActivity.start(getActivity());
-        });
+
+                    ContactDialog contactDialog = new ContactDialog();
+                    contactDialog.show(getChildFragmentManager(), ContactDialog.class.getSimpleName());
+                    contactDialog.setOnContactDialogItemClickListener((type)->{
+                        contactDialog.dismiss();
+                        switch (type){
+                            case ContactDialog.ADD_FRIENDS: // 添加朋友
+                                AddFriendActivity.start(getActivity());
+                                break;
+                            case ContactDialog.CREATE_GROUP: // 创建群聊
+                                ContactSelectActivity.Option advancedOption = TeamHelper.getCreateContactSelectOption(null, 50);
+                                NimUIKit.startContactSelector(getActivity(), advancedOption,2);
+                                break;
+                            case ContactDialog.SEARCH_GROUP: // 搜索群
+                                AdvancedTeamSearchActivity.start(getActivity());
+                                break;
+
+                        }
+                    });
+
+                }
+        );
+
+
     }
+
 
     @Override
     public void onResume() {
