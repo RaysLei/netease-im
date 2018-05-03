@@ -115,7 +115,7 @@ public class SystemMessageActivity extends UI implements TAdapterDelegate,
         setContentView(R.layout.system_notification_message_activity);
 
         ToolBarOptions options = new NimToolBarOptions();
-        options.titleId = R.string.verify_reminder;
+        options.titleId = R.string.contact_new_friends;
         setToolBar(R.id.toolbar, options);
 
         initAdapter();

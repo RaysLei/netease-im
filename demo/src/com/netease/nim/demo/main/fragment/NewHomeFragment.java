@@ -1,8 +1,10 @@
 package com.netease.nim.demo.main.fragment;
 
-import android.graphics.Color;
+import android.content.res.ColorStateList;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +14,8 @@ import android.widget.TextView;
 
 import com.netease.nim.demo.R;
 import com.netease.nim.demo.common.ui.viewpager.FadeInOutPageTransformer;
+import com.netease.nim.demo.contact.activity.AddFriendActivity;
+import com.netease.nim.demo.main.activity.MainActivity;
 import com.netease.nim.demo.main.adapter.MainTabPagerAdapter;
 import com.netease.nim.demo.main.helper.SystemMessageUnreadManager;
 import com.netease.nim.demo.main.model.MainTab;
@@ -41,6 +45,7 @@ public class NewHomeFragment extends TFragment implements ReminderManager.Unread
     private View rootView;
     private TabLayout mTabLayout;
     private TextView mTvTitle;
+    private ImageView mIvNavRight;
 
     public NewHomeFragment() {
         setContainerId(R.id.welcome_container);
@@ -74,7 +79,12 @@ public class NewHomeFragment extends TFragment implements ReminderManager.Unread
         mTabLayout = findView(R.id.new_main_tab_layout);
         pager = findView(R.id.new_main_tab_pager);
         mTvTitle = findView(R.id.tv_top_nav_title);
-        mTvTitle.setText("会话");
+        mIvNavRight = findView(R.id.iv_top_nav_right);
+        mTvTitle.setText(getString(R.string.home_conversation));
+
+        mIvNavRight.setOnClickListener((view) -> {
+            AddFriendActivity.start(getActivity());
+        });
     }
 
     @Override
@@ -119,6 +129,13 @@ public class NewHomeFragment extends TFragment implements ReminderManager.Unread
 
     }
 
+    // icon resIds
+    private int[] imageResIds = {
+            R.drawable.nav_msg,
+            R.drawable.nav_contact,
+            R.drawable.nav_mine
+    };
+
     /**
      * 设置tab条目
      */
@@ -134,10 +151,14 @@ public class NewHomeFragment extends TFragment implements ReminderManager.Unread
             ImageView mIvNavIcon = contentView.findViewById(R.id.iv_nav_icon);
 
             MainTab mainTab = MainTab.fromTabIndex(i);
-            mTvNavTitle.setTextColor(0 == i ? getResources().getColor(R.color.grapefruitColor) : Color.parseColor("#333333"));
+            mTvNavTitle.setTextColor(0 == i ? getResources().getColor(R.color.navColor) : getResources().getColor(R.color.color_black_333333));
             mTvNavTitle.setText(mainTab.resId);
 
-            mIvNavIcon.setImageResource(0 == i ? R.drawable.contact_selected : R.drawable.contact);
+            mIvNavIcon.setImageResource(imageResIds[i]);
+            if (0 == i) {
+                changeImageViewColor(mIvNavIcon, R.color.navColor);
+            }
+
             tab.setCustomView(contentView);
 
         }
@@ -245,10 +266,11 @@ public class NewHomeFragment extends TFragment implements ReminderManager.Unread
 
         View view = tab.getCustomView();
 
-        ((TextView) view.findViewById(R.id.tv_nav_title)).setTextColor(getResources().getColor(R.color.grapefruitColor));
-        ((ImageView) view.findViewById(R.id.iv_nav_icon)).setImageResource(R.drawable.contact_selected);
+        ((TextView) view.findViewById(R.id.tv_nav_title)).setTextColor(getResources().getColor(R.color.navColor));
+        changeImageViewColor(((ImageView) view.findViewById(R.id.iv_nav_icon)), R.color.navColor);
 
         mTvTitle.setText(MainTab.fromTabIndex(tab.getPosition()).resId);
+        mIvNavRight.setVisibility(1 == tab.getPosition() ? View.VISIBLE : View.GONE);
 
     }
 
@@ -256,13 +278,28 @@ public class NewHomeFragment extends TFragment implements ReminderManager.Unread
     public void onTabUnselected(TabLayout.Tab tab) {
 
         View view = tab.getCustomView();
-        ((TextView) view.findViewById(R.id.tv_nav_title)).setTextColor(Color.parseColor("#333333"));
-        ((ImageView) view.findViewById(R.id.iv_nav_icon)).setImageResource(R.drawable.contact);
+        ((TextView) view.findViewById(R.id.tv_nav_title)).setTextColor(getResources().getColor(R.color.color_black_333333));
+        ((ImageView) view.findViewById(R.id.iv_nav_icon)).setImageResource(imageResIds[tab.getPosition()]);
     }
 
     @Override
     public void onTabReselected(TabLayout.Tab tab) {
 
+    }
+
+    /**
+     * 更改ImageView的颜色
+     *
+     * @param view       ImageView
+     * @param colorResId colorId
+     */
+    public static void changeImageViewColor(ImageView view, int colorResId) {
+        //mutate()
+        Drawable modeDrawable = view.getDrawable().mutate();
+        Drawable temp = DrawableCompat.wrap(modeDrawable);
+        ColorStateList colorStateList = ColorStateList.valueOf(view.getResources().getColor(colorResId));
+        DrawableCompat.setTintList(temp, colorStateList);
+        view.setImageDrawable(temp);
     }
 
 

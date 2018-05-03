@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.netease.nim.demo.DemoCache;
 import com.netease.nim.demo.R;
@@ -49,12 +50,14 @@ public class ContactListFragment extends MainTabFragment {
      * ******************************** 功能项定制 ***********************************
      */
     final static class FuncItem extends AbsContactItem {
-        static final FuncItem VERIFY = new FuncItem();
-        static final FuncItem ROBOT = new FuncItem();
-        static final FuncItem NORMAL_TEAM = new FuncItem();
-        static final FuncItem ADVANCED_TEAM = new FuncItem();
-        static final FuncItem BLACK_LIST = new FuncItem();
-        static final FuncItem MY_COMPUTER = new FuncItem();
+        //        static final FuncItem VERIFY = new FuncItem();
+//        static final FuncItem ROBOT = new FuncItem();
+//        static final FuncItem NORMAL_TEAM = new FuncItem();
+//        static final FuncItem ADVANCED_TEAM = new FuncItem();
+//        static final FuncItem BLACK_LIST = new FuncItem();
+//        static final FuncItem MY_COMPUTER = new FuncItem();
+        static final FuncItem NEW_FRIENDS = new FuncItem();
+        static final FuncItem GROUP_CHAT = new FuncItem();
 
         @Override
         public int getItemType() {
@@ -82,9 +85,44 @@ public class ContactListFragment extends MainTabFragment {
 
             @Override
             public void refresh(ContactDataAdapter contactAdapter, int position, FuncItem item) {
-                if (item == VERIFY) {
-                    funcName.setText("验证提醒");
-                    image.setImageResource(R.drawable.icon_verify_remind);
+//                if (item == VERIFY) {
+//                    funcName.setText("验证提醒");
+//                    image.setImageResource(R.drawable.icon_verify_remind);
+//                    image.setScaleType(ScaleType.FIT_XY);
+//                    int unreadCount = SystemMessageUnreadManager.getInstance().getSysMsgUnreadCount();
+//                    updateUnreadNum(unreadCount);
+//
+//                    ReminderManager.getInstance().registerUnreadNumChangedCallback(new ReminderManager.UnreadNumChangedCallback() {
+//                        @Override
+//                        public void onUnreadNumChanged(ReminderItem item) {
+//                            if (item.getId() != ReminderId.CONTACT) {
+//                                return;
+//                            }
+//
+//                            updateUnreadNum(item.getUnread());
+//                        }
+//                    });
+//                } else if (item == ROBOT) {
+//                    funcName.setText("智能机器人");
+//                    image.setImageResource(R.drawable.ic_robot);
+//                } else if (item == NORMAL_TEAM) {
+//                    funcName.setText("讨论组");
+//                    image.setImageResource(R.drawable.ic_secretary);
+//                } else if (item == ADVANCED_TEAM) {
+//                    funcName.setText("高级群");
+//                    image.setImageResource(R.drawable.ic_advanced_team);
+//                } else if (item == BLACK_LIST) {
+//                    funcName.setText("黑名单");
+//                    image.setImageResource(R.drawable.ic_black_list);
+//                } else if (item == MY_COMPUTER) {
+//                    funcName.setText("我的电脑");
+//                    image.setImageResource(R.drawable.ic_my_computer);
+//                }
+
+                if (item == NEW_FRIENDS) {
+                    funcName.setText(R.string.contact_new_friends);
+                    image.setImageResource(R.drawable.contact_new_friends);
+
                     image.setScaleType(ScaleType.FIT_XY);
                     int unreadCount = SystemMessageUnreadManager.getInstance().getSysMsgUnreadCount();
                     updateUnreadNum(unreadCount);
@@ -99,27 +137,15 @@ public class ContactListFragment extends MainTabFragment {
                             updateUnreadNum(item.getUnread());
                         }
                     });
-                } else if (item == ROBOT) {
-                    funcName.setText("智能机器人");
-                    image.setImageResource(R.drawable.ic_robot);
-                } else if (item == NORMAL_TEAM) {
-                    funcName.setText("讨论组");
-                    image.setImageResource(R.drawable.ic_secretary);
-                } else if (item == ADVANCED_TEAM) {
-                    funcName.setText("高级群");
-                    image.setImageResource(R.drawable.ic_advanced_team);
-                } else if (item == BLACK_LIST) {
-                    funcName.setText("黑名单");
-                    image.setImageResource(R.drawable.ic_black_list);
-                } else if (item == MY_COMPUTER) {
-                    funcName.setText("我的电脑");
-                    image.setImageResource(R.drawable.ic_my_computer);
+                } else if (item == GROUP_CHAT) {
+                    funcName.setText(R.string.contact_group_chat);
+                    image.setImageResource(R.drawable.contact_group_chat);
                 }
 
-                if (item != VERIFY) {
-                    image.setScaleType(ScaleType.FIT_XY);
-                    unreadNum.setVisibility(View.GONE);
-                }
+//                if (item != VERIFY) {
+//                    image.setScaleType(ScaleType.FIT_XY);
+//                    unreadNum.setVisibility(View.GONE);
+//                }
             }
 
             private void updateUnreadNum(int unreadCount) {
@@ -135,30 +161,41 @@ public class ContactListFragment extends MainTabFragment {
 
         static List<AbsContactItem> provide() {
             List<AbsContactItem> items = new ArrayList<AbsContactItem>();
-            items.add(VERIFY);
-            items.add(ROBOT);
-            items.add(NORMAL_TEAM);
-            items.add(ADVANCED_TEAM);
-            items.add(BLACK_LIST);
-            items.add(MY_COMPUTER);
+            items.add(NEW_FRIENDS);
+            items.add(GROUP_CHAT);
+//            items.add(VERIFY);
+//            items.add(ROBOT);
+//            items.add(NORMAL_TEAM);
+//            items.add(ADVANCED_TEAM);
+//            items.add(BLACK_LIST);
+//            items.add(MY_COMPUTER);
 
             return items;
         }
 
         static void handle(Context context, AbsContactItem item) {
-            if (item == VERIFY) {
+
+            if (item == NEW_FRIENDS) {
+//                Toast.makeText(context, "new friends", Toast.LENGTH_SHORT).show();
                 SystemMessageActivity.start(context);
-            } else if (item == ROBOT) {
-                RobotListActivity.start(context);
-            } else if (item == NORMAL_TEAM) {
-                TeamListActivity.start(context, ItemTypes.TEAMS.NORMAL_TEAM);
-            } else if (item == ADVANCED_TEAM) {
+            } else if (item == GROUP_CHAT) {
+//                Toast.makeText(context, "group chat", Toast.LENGTH_SHORT).show();
                 TeamListActivity.start(context, ItemTypes.TEAMS.ADVANCED_TEAM);
-            } else if (item == MY_COMPUTER) {
-                SessionHelper.startP2PSession(context, DemoCache.getAccount());
-            } else if (item == BLACK_LIST) {
-                BlackListActivity.start(context);
             }
+
+//            if (item == VERIFY) {
+//                SystemMessageActivity.start(context);
+//            } else if (item == ROBOT) {
+//                RobotListActivity.start(context);
+//            } else if (item == NORMAL_TEAM) {
+//                TeamListActivity.start(context, ItemTypes.TEAMS.NORMAL_TEAM);
+//            } else if (item == ADVANCED_TEAM) {
+//                TeamListActivity.start(context, ItemTypes.TEAMS.ADVANCED_TEAM);
+//            } else if (item == MY_COMPUTER) {
+//                SessionHelper.startP2PSession(context, DemoCache.getAccount());
+//            } else if (item == BLACK_LIST) {
+//                BlackListActivity.start(context);
+//            }
         }
     }
 
