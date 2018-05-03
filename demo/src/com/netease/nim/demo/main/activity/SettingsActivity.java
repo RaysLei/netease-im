@@ -163,69 +163,70 @@ public class SettingsActivity extends UI implements SettingsAdapter.SwitchChange
     private void initItems() {
         items.clear();
 
-        items.add(new SettingTemplate(TAG_HEAD, SettingType.TYPE_HEAD));
-        notificationItem = new SettingTemplate(TAG_NOTICE, getString(R.string.msg_notice), SettingType.TYPE_TOGGLE,
-                UserPreferences.getNotificationToggle());
-        items.add(notificationItem);
-        items.add(SettingTemplate.addLine());
-        pushShowNoDetailItem = new SettingTemplate(TAG_PUSH_SHOW_NO_DETAIL, getString(R.string.push_no_detail), SettingType.TYPE_TOGGLE, getIsShowPushNoDetail());
-        items.add(pushShowNoDetailItem);
-        items.add(new SettingTemplate(TAG_RING, getString(R.string.ring), SettingType.TYPE_TOGGLE,
-                UserPreferences.getRingToggle()));
-        items.add(new SettingTemplate(TAG_LED, getString(R.string.led), SettingType.TYPE_TOGGLE,
-                UserPreferences.getLedToggle()));
-        items.add(SettingTemplate.addLine());
-        items.add(new SettingTemplate(TAG_NOTICE_CONTENT, getString(R.string.notice_content), SettingType.TYPE_TOGGLE,
-                UserPreferences.getNoticeContentToggle()));
+//        items.add(new SettingTemplate(TAG_HEAD, SettingType.TYPE_HEAD));
+//        notificationItem = new SettingTemplate(TAG_NOTICE, getString(R.string.msg_notice), SettingType.TYPE_TOGGLE,
+//                UserPreferences.getNotificationToggle());
+//        items.add(notificationItem);
+//        items.add(SettingTemplate.addLine());
+//        pushShowNoDetailItem = new SettingTemplate(TAG_PUSH_SHOW_NO_DETAIL, getString(R.string.push_no_detail), SettingType.TYPE_TOGGLE, getIsShowPushNoDetail());
+//        items.add(pushShowNoDetailItem);
+//        items.add(new SettingTemplate(TAG_RING, getString(R.string.ring), SettingType.TYPE_TOGGLE,
+//                UserPreferences.getRingToggle()));
+//        items.add(new SettingTemplate(TAG_LED, getString(R.string.led), SettingType.TYPE_TOGGLE,
+//                UserPreferences.getLedToggle()));
+//        items.add(SettingTemplate.addLine());
+//        items.add(new SettingTemplate(TAG_NOTICE_CONTENT, getString(R.string.notice_content), SettingType.TYPE_TOGGLE,
+//                UserPreferences.getNoticeContentToggle()));
 //        items.add(new SettingTemplate(TAG_NOTIFICATION_STYLE, getString(R.string.notification_folded), SettingType.TYPE_TOGGLE,
 //                UserPreferences.getNotificationFoldedToggle()));
-        items.add(SettingTemplate.addLine());
-        disturbItem = new SettingTemplate(TAG_NO_DISTURBE, getString(R.string.no_disturb), noDisturbTime);
-        items.add(disturbItem);
-        items.add(SettingTemplate.addLine());
-        items.add(new SettingTemplate(TAG_MULTIPORT_PUSH, getString(R.string.multiport_push), SettingType.TYPE_TOGGLE,
-                !NIMClient.getService(SettingsService.class).isMultiportPushOpen()));
+//        items.add(SettingTemplate.addLine());
+//        disturbItem = new SettingTemplate(TAG_NO_DISTURBE, getString(R.string.no_disturb), noDisturbTime);
+//        items.add(disturbItem);
+//        items.add(SettingTemplate.addLine());
+//        items.add(new SettingTemplate(TAG_MULTIPORT_PUSH, getString(R.string.multiport_push), SettingType.TYPE_TOGGLE,
+//                !NIMClient.getService(SettingsService.class).isMultiportPushOpen()));
+//
+//        items.add(SettingTemplate.makeSeperator());
+//
+//        items.add(new SettingTemplate(TAG_SPEAKER, getString(R.string.msg_speaker), SettingType.TYPE_TOGGLE,
+//                NimUIKit.isEarPhoneModeEnable()));
+//
+//        items.add(SettingTemplate.makeSeperator());
+//
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+//            items.add(new SettingTemplate(TAG_NRTC_SETTINGS, getString(R.string.nrtc_settings)));
+//            items.add(SettingTemplate.addLine());
+//            items.add(new SettingTemplate(TAG_NRTC_NET_DETECT, "音视频通话网络探测"));
+//            items.add(SettingTemplate.makeSeperator());
+//        }
+
+//        items.add(new SettingTemplate(TAG_MSG_IGNORE, "过滤通知",
+//                SettingType.TYPE_TOGGLE, UserPreferences.getMsgIgnore()));
+//
+//        items.add(SettingTemplate.makeSeperator());
 
         items.add(SettingTemplate.makeSeperator());
-
-        items.add(new SettingTemplate(TAG_SPEAKER, getString(R.string.msg_speaker), SettingType.TYPE_TOGGLE,
-                NimUIKit.isEarPhoneModeEnable()));
-
-        items.add(SettingTemplate.makeSeperator());
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            items.add(new SettingTemplate(TAG_NRTC_SETTINGS, getString(R.string.nrtc_settings)));
-            items.add(SettingTemplate.addLine());
-            items.add(new SettingTemplate(TAG_NRTC_NET_DETECT, "音视频通话网络探测"));
-            items.add(SettingTemplate.makeSeperator());
-        }
-
-        items.add(new SettingTemplate(TAG_MSG_IGNORE, "过滤通知",
-                SettingType.TYPE_TOGGLE, UserPreferences.getMsgIgnore()));
-
-        items.add(SettingTemplate.makeSeperator());
-
         items.add(new SettingTemplate(TAG_CLEAR, getString(R.string.about_clear_msg_history)));
         items.add(SettingTemplate.addLine());
         clearIndexItem = new SettingTemplate(TAG_CLEAR_INDEX, getString(R.string.clear_index), getIndexCacheSize() + " M");
         items.add(clearIndexItem);
         items.add(SettingTemplate.addLine());
-        clearSDKDirCacheItem = new SettingTemplate(TAG_CLEAR_SDK_CACHE, getString(R.string.clear_sdk_cache), 0 + " M");
+        clearSDKDirCacheItem = new SettingTemplate(TAG_CLEAR_SDK_CACHE, "清除缓存", 0 + " M");
         items.add(clearSDKDirCacheItem);
 
-        items.add(SettingTemplate.makeSeperator());
-
-        items.add(new SettingTemplate(TAG_CUSTOM_NOTIFY, getString(R.string.custom_notification)));
-        items.add(SettingTemplate.addLine());
-        items.add(new SettingTemplate(TAG_JS_BRIDGE, getString(R.string.js_bridge_demonstration)));
-        items.add(SettingTemplate.makeSeperator());
-
-        if (NIMRedPacketClient.isEnable()) {
-            items.add(new SettingTemplate(TAG_JRMFWAllET, "我的钱包"));
-            items.add(SettingTemplate.makeSeperator());
-        }
-
-        items.add(new SettingTemplate(TAG_ABOUT, getString(R.string.setting_about)));
+//        items.add(SettingTemplate.makeSeperator());
+//
+//        items.add(new SettingTemplate(TAG_CUSTOM_NOTIFY, getString(R.string.custom_notification)));
+//        items.add(SettingTemplate.addLine());
+//        items.add(new SettingTemplate(TAG_JS_BRIDGE, getString(R.string.js_bridge_demonstration)));
+//        items.add(SettingTemplate.makeSeperator());
+//
+//        if (NIMRedPacketClient.isEnable()) {
+//            items.add(new SettingTemplate(TAG_JRMFWAllET, "我的钱包"));
+//            items.add(SettingTemplate.makeSeperator());
+//        }
+//
+//        items.add(new SettingTemplate(TAG_ABOUT, getString(R.string.setting_about)));
 
     }
 

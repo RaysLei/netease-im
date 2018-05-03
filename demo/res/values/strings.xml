@@ -225,5 +225,8 @@
     <string name="home_conversation">会话</string>
     <string name="contact_new_friends">新的朋友</string>
     <string name="contact_group_chat">群聊</string>
+    <string name="contact_add_friends">添加好友</string>
+    <string name="contact_create_group">创建群聊</string>
+    <string name="contact_search_group">搜索群</string>
 
 </resources>
