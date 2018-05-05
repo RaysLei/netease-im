@@ -20,7 +20,7 @@
             app:titleTextAppearance="@style/Toolbar.TitleText"/>
     </android.support.design.widget.AppBarLayout>
 
-    <com.netease.nim.demo.common.ui.viewpager.PagerSlidingTabStrip
+    <com.abc.im.common.ui.viewpager.PagerSlidingTabStrip
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="@dimen/pager_sliding_tab_strip_height"

@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/master_fragment"
-        android:name="com.netease.nim.demo.chatroom.fragment.MasterFragment"
+        android:name="com.abc.im.chatroom.fragment.MasterFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>

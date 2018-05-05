@@ -6,7 +6,7 @@
 
   <fragment
         android:id="@+id/chat_rooms_fragment"
-        android:name="com.netease.nim.demo.chatroom.fragment.ChatRoomFragment"
+        android:name="com.abc.im.chatroom.fragment.ChatRoomFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

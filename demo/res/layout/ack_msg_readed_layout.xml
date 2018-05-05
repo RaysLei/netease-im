@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <fragment
-        android:name="com.netease.nim.demo.session.fragment.ReadAckMsgFragment"
+        android:name="com.abc.im.session.fragment.ReadAckMsgFragment"
         android:id="@+id/read_ack_msg_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

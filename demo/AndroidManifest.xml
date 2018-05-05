@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.netease.nim.demo"
+          package="com.abc.im"
           android:installLocation="auto">
 
     <!-- 加入应用需要的权限 -->
@@ -68,7 +68,7 @@
     <uses-permission android:name="com.netease.nim.demo.permission.C2D_MESSAGE"/>
 
     <application
-        android:name=".NimApplication"
+        android:name="com.abc.im.NimApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_logo"
         android:label="@string/app_name"
@@ -99,7 +99,7 @@
 
         <!-- 导航页 -->
         <activity
-            android:name=".main.activity.WelcomeActivity"
+            android:name="com.abc.im.main.activity.WelcomeActivity"
             android:configChanges="keyboardHidden|orientation"
             android:hardwareAccelerated="true"
             android:label="@string/app_name"
@@ -117,7 +117,7 @@
 
         <!-- 主界面 -->
         <activity
-            android:name=".main.activity.MainActivity"
+            android:name="com.abc.im.main.activity.MainActivity"
             android:configChanges="keyboardHidden|orientation"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"
@@ -127,7 +127,7 @@
 
         <!-- 多端登录管理 -->
         <activity
-            android:name=".main.activity.MultiportActivity"
+            android:name="com.abc.im.main.activity.MultiportActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
@@ -135,14 +135,14 @@
 
         <!-- 登录界面 -->
         <activity
-            android:name=".login.LoginActivity"
+            android:name="com.abc.im.login.LoginActivity"
             android:configChanges="orientation"
             android:label="@string/login"
             android:screenOrientation="portrait"
             android:theme="@style/LoginTheme"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
-        <activity android:name=".login.RegisterActivity"
+        <activity android:name="com.abc.im.login.RegisterActivity"
             android:configChanges="orientation"
             android:label="@string/register"
             android:screenOrientation="portrait"
@@ -151,7 +151,7 @@
 
         <!-- 关于 -->
         <activity
-            android:name=".main.activity.AboutActivity"
+            android:name="com.abc.im.main.activity.AboutActivity"
             android:configChanges="orientation"
             android:label="@string/about"
             android:screenOrientation="portrait"
@@ -159,49 +159,49 @@
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <activity
-            android:name=".main.activity.SettingsActivity"
+            android:name="com.abc.im.main.activity.SettingsActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name=".main.activity.NoDisturbActivity"
+            android:name="com.abc.im.main.activity.NoDisturbActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <activity
-            android:name=".contact.activity.AddFriendActivity"
+            android:name="com.abc.im.contact.activity.AddFriendActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <activity
-            android:name=".contact.activity.UserProfileActivity"
+            android:name="com.abc.im.contact.activity.UserProfileActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <activity
-            android:name=".contact.activity.UserProfileSettingActivity"
+            android:name="com.abc.im.contact.activity.UserProfileSettingActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <activity
-            android:name=".contact.activity.UserProfileEditItemActivity"
+            android:name="com.abc.im.contact.activity.UserProfileEditItemActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <activity
-            android:name=".contact.activity.BlackListActivity"
+            android:name="com.abc.im.contact.activity.BlackListActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
@@ -209,7 +209,7 @@
 
         <!-- 文件管理器 -->
         <activity
-            android:name=".file.browser.FileBrowserActivity"
+            android:name="com.abc.im.file.browser.FileBrowserActivity"
             android:configChanges="orientation"
             android:label="@string/file_browser"
             android:screenOrientation="portrait"
@@ -217,46 +217,46 @@
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <activity
-            android:name=".main.activity.SystemMessageActivity"
+            android:name="com.abc.im.main.activity.SystemMessageActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".main.activity.CustomNotificationActivity"
+            android:name="com.abc.im.main.activity.CustomNotificationActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".session.activity.MessageHistoryActivity"
+            android:name="com.abc.im.session.activity.MessageHistoryActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".session.activity.MessageInfoActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-
-        <activity
-            android:name=".team.activity.AdvancedTeamSearchActivity"
+            android:name="com.abc.im.session.activity.MessageInfoActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <activity
-            android:name=".team.activity.AdvancedTeamJoinActivity"
+            android:name="com.abc.im.team.activity.AdvancedTeamSearchActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <activity
-            android:name=".main.activity.TeamListActivity"
+            android:name="com.abc.im.team.activity.AdvancedTeamJoinActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="com.abc.im.main.activity.TeamListActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
@@ -264,45 +264,45 @@
 
         <!-- 全局搜索 -->
         <activity
-            android:name=".main.activity.GlobalSearchActivity"
+            android:name="com.abc.im.main.activity.GlobalSearchActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/global_search_bg"
             android:windowSoftInputMode="stateUnspecified" />
 
         <activity
-            android:name=".main.activity.GlobalSearchDetailActivity"
+            android:name="com.abc.im.main.activity.GlobalSearchDetailActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name=".main.activity.GlobalSearchDetailActivity2"
+            android:name="com.abc.im.main.activity.GlobalSearchDetailActivity2"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- 查看阅后即焚 -->
         <activity
-            android:name=".session.activity.WatchSnapChatPictureActivity"
+            android:name="com.abc.im.session.activity.WatchSnapChatPictureActivity"
             android:configChanges="keyboardHidden"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- 下载文件 -->
         <activity
-            android:name=".session.activity.FileDownloadActivity"
+            android:name="com.abc.im.session.activity.FileDownloadActivity"
             android:configChanges="keyboardHidden"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- map -->
         <activity
-            android:name=".location.activity.LocationAmapActivity"
+            android:name="com.abc.im.location.activity.LocationAmapActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/location_map"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".location.activity.NavigationAmapActivity"
+            android:name="com.abc.im.location.activity.NavigationAmapActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/location_navigate"
             android:screenOrientation="portrait"
@@ -310,14 +310,14 @@
 
         <!-- 消息历史搜索 -->
         <activity
-            android:name=".session.search.SearchMessageActivity"
+            android:name="com.abc.im.session.search.SearchMessageActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/global_search_bg"
             android:windowSoftInputMode="adjustPan|stateUnspecified" />
 
         <activity
-            android:name=".session.search.DisplayMessageActivity"
+            android:name="com.abc.im.session.search.DisplayMessageActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
@@ -325,13 +325,13 @@
 
         <!-- 聊天室 -->
         <activity
-            android:name=".chatroom.activity.ChatRoomActivity"
+            android:name="com.abc.im.chatroom.activity.ChatRoomActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <activity
-            android:name=".jsbridge.JsBridgeActivity"
+            android:name="com.abc.im.jsbridge.JsBridgeActivity"
             android:label="@string/js_bridge"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
@@ -339,22 +339,22 @@
 
         <!-- 机器人 -->
         <activity
-            android:name=".main.activity.RobotListActivity"
+            android:name="com.abc.im.main.activity.RobotListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- 已读回执 -->
-        <activity android:name=".session.activity.SendAckMsgActivity"
+        <activity android:name="com.abc.im.session.activity.SendAckMsgActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- 已读回执详情 -->
-        <activity android:name=".session.activity.AckMsgInfoActivity"
+        <activity android:name="com.abc.im.session.activity.AckMsgInfoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name=".contact.activity.RobotProfileActivity"
+            android:name="com.abc.im.contact.activity.RobotProfileActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
@@ -403,7 +403,7 @@
         <!-- 申明自定义通知的广播接收器，第三方APP集成时，action中的com.netease.nim.demo请替换为自己的包名 -->
         <!-- 需要权限申明 <uses-permission android:name="com.netease.nim.demo.permission.RECEIVE_MSG"/> -->
         <receiver
-            android:name=".receiver.CustomNotificationReceiver"
+            android:name="com.abc.im.receiver.CustomNotificationReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
