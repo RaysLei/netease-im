@@ -31,41 +31,41 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!--<uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />-->
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!--<uses-permission android:name="android.permission.WRITE_SETTINGS" />-->
 
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-    <!-- SDK权限申明, 第三方APP接入时，请将com.netease.nim.demo替换为自己的包名 -->
+    <!-- SDK权限申明, 第三方APP接入时，请将com.abc.im替换为自己的包名 -->
     <!-- 和下面的uses-permission一起加入到你的AndroidManifest文件中。 -->
     <permission
-        android:name="com.netease.nim.demo.permission.RECEIVE_MSG"
+        android:name="com.abc.im.permission.RECEIVE_MSG"
         android:protectionLevel="signature" />
 
-    <!-- 接受SDK消息广播权限， 第三方APP接入时，请将com.netease.nim.demo替换为自己的包名 -->
-    <uses-permission android:name="com.netease.nim.demo.permission.RECEIVE_MSG" />
+    <!-- 接受SDK消息广播权限， 第三方APP接入时，请将com.abc.im替换为自己的包名 -->
+    <uses-permission android:name="com.abc.im.permission.RECEIVE_MSG" />
 
     <!-- 小米推送 -->
     <permission
-        android:name="com.netease.nim.demo.permission.MIPUSH_RECEIVE"
+        android:name="com.abc.im.permission.MIPUSH_RECEIVE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="com.netease.nim.demo.permission.MIPUSH_RECEIVE" />
+    <uses-permission android:name="com.abc.im.permission.MIPUSH_RECEIVE" />
 
     <uses-sdk tools:overrideLibrary="com.huawei.android.hms.base,com.huawei.android.hms.push" />
     <!--魅族推送-->
 
     <!-- 兼容flyme5.0以下版本，魅族内部集成pushSDK必填，不然无法收到消息-->
     <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE" />
-    <permission android:name="com.netease.nim.demo.push.permission.MESSAGE"
+    <permission android:name="com.abc.im.push.permission.MESSAGE"
         android:protectionLevel="signature"/>
-    <uses-permission android:name="com.netease.nim.demo.push.permission.MESSAGE" />
+    <uses-permission android:name="com.abc.im.push.permission.MESSAGE" />
     <!--  兼容flyme3.0配置权限-->
     <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />
-    <permission android:name="com.netease.nim.demo.permission.C2D_MESSAGE"
+    <permission android:name="com.abc.im.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="com.netease.nim.demo.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.abc.im.permission.C2D_MESSAGE"/>
 
     <application
         android:name="com.abc.im.NimApplication"
@@ -81,7 +81,7 @@
 
         <meta-data
             android:name="com.netease.nim.appKey"
-			android:value="45c6af3c98409b18a84451215d0bdd6e" />
+			android:value="ac3e57a76b0446b3904474a60fe87942" />
 
         <uses-library
             android:name="com.google.android.maps"
@@ -393,21 +393,21 @@
         <service android:name="com.netease.nimlib.service.ResponseService" />
 
         <!-- 云信进程间通信provider -->
-        <!-- android:authorities="{包名}.ipc.provider", 请将com.netease.nim.demo替换为自己的包名 -->
+        <!-- android:authorities="{包名}.ipc.provider", 请将com.abc.im替换为自己的包名 -->
         <provider
             android:name="com.netease.nimlib.ipc.NIMContentProvider"
-            android:authorities="com.netease.nim.demo.ipc.provider"
+            android:authorities="com.abc.im.ipc.provider"
             android:exported="false"
             android:process=":core" />
 
-        <!-- 申明自定义通知的广播接收器，第三方APP集成时，action中的com.netease.nim.demo请替换为自己的包名 -->
-        <!-- 需要权限申明 <uses-permission android:name="com.netease.nim.demo.permission.RECEIVE_MSG"/> -->
+        <!-- 申明自定义通知的广播接收器，第三方APP集成时，action中的com.abc.im请替换为自己的包名 -->
+        <!-- 需要权限申明 <uses-permission android:name="com.abc.im.permission.RECEIVE_MSG"/> -->
         <receiver
             android:name="com.abc.im.receiver.CustomNotificationReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.netease.nim.demo.ACTION.RECEIVE_CUSTOM_NOTIFICATION" />
+                <action android:name="com.abc.im.ACTION.RECEIVE_CUSTOM_NOTIFICATION" />
             </intent-filter>
         </receiver>
 
@@ -469,7 +469,7 @@
 
         <provider
             android:name="com.huawei.hms.update.provider.UpdateProvider"
-            android:authorities="com.netease.nim.demo.hms.update.provider"
+            android:authorities="com.abc.im.hms.update.provider"
             android:exported="false"
             android:grantUriPermissions="true" />
 
@@ -527,7 +527,7 @@
                 <!-- 兼容低版本Flyme3推送服务配置 -->
                 <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
                 <action android:name="com.meizu.c2dm.intent.RECEIVE" />
-                <category android:name="com.netease.nim.demo" />
+                <category android:name="com.abc.im" />
             </intent-filter>
         </receiver>
     </application>

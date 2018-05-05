@@ -237,7 +237,7 @@ public class LoginActivity extends UI implements OnKeyListener {
 
         loginPasswordEdit = findView(R.id.edit_login_password);
         loginPasswordEdit.setIconResource(R.drawable.user_pwd_lock_icon);
-        loginPasswordEdit.setFilters(new InputFilter[]{new InputFilter.LengthFilter(31)});
+        loginPasswordEdit.setFilters(new InputFilter[]{new InputFilter.LengthFilter(20)});
         loginPasswordEdit.setOnKeyListener(this);
 
         getCaptchaBtn = findView(R.id.tv_get_captcha);
