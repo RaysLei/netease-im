@@ -1,13 +1,11 @@
 package com.abc.im.main.fragment;
 
-import android.app.Dialog;
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +15,6 @@ import android.widget.TextView;
 import com.abc.im.R;
 import com.abc.im.common.ui.viewpager.FadeInOutPageTransformer;
 import com.abc.im.contact.activity.AddFriendActivity;
-import com.abc.im.main.activity.MainActivity;
 import com.abc.im.main.adapter.MainTabPagerAdapter;
 import com.abc.im.main.dialog.ContactDialog;
 import com.abc.im.main.helper.SystemMessageUnreadManager;
@@ -39,16 +36,6 @@ import com.netease.nimlib.sdk.msg.SystemMessageObserver;
 import com.netease.nimlib.sdk.msg.SystemMessageService;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.RecentContact;
-import com.netease.nimlib.sdk.util.NIMUtil;
-
-import java.io.IOException;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 /**
  * 云信主界面（导航页）

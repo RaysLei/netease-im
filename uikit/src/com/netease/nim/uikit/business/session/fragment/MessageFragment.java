@@ -55,7 +55,7 @@ public class MessageFragment extends TFragment implements ModuleProxy {
 
     private View rootView;
 
-    private SessionCustomization customization;
+//    private SessionCustomization customization;
 
     protected static final String TAG = "MessageActivity";
 
@@ -137,7 +137,7 @@ public class MessageFragment extends TFragment implements ModuleProxy {
         sessionType = (SessionTypeEnum) getArguments().getSerializable(Extras.EXTRA_TYPE);
         IMMessage anchor = (IMMessage) getArguments().getSerializable(Extras.EXTRA_ANCHOR);
 
-        customization = (SessionCustomization) getArguments().getSerializable(Extras.EXTRA_CUSTOMIZATION);
+//        customization = (SessionCustomization) getArguments().getSerializable(Extras.EXTRA_CUSTOMIZATION);
         Container container = new Container(getActivity(), sessionId, sessionType, this);
 
         if (messageListPanel == null) {
@@ -148,9 +148,9 @@ public class MessageFragment extends TFragment implements ModuleProxy {
 
         if (inputPanel == null) {
             inputPanel = new InputPanel(container, rootView, getActionList());
-            inputPanel.setCustomization(customization);
+//            inputPanel.setCustomization(customization);
         } else {
-            inputPanel.reload(container, customization);
+//            inputPanel.reload(container, customization);
         }
 
         initAitManager();
@@ -159,9 +159,9 @@ public class MessageFragment extends TFragment implements ModuleProxy {
 
         registerObservers(true);
 
-        if (customization != null) {
-            messageListPanel.setChattingBackground(customization.backgroundUri, customization.backgroundColor);
-        }
+//        if (customization != null) {
+//            messageListPanel.setChattingBackground(customization.backgroundUri, customization.backgroundColor);
+//        }
     }
 
     private void initAitManager() {
@@ -377,11 +377,11 @@ public class MessageFragment extends TFragment implements ModuleProxy {
         List<BaseAction> actions = new ArrayList<>();
         actions.add(new ImageAction());
         actions.add(new VideoAction());
-        actions.add(new LocationAction());
+//        actions.add(new LocationAction());
 
-        if (customization != null && customization.actions != null) {
-            actions.addAll(customization.actions);
-        }
+//        if (customization != null && customization.actions != null) {
+//            actions.addAll(customization.actions);
+//        }
         return actions;
     }
 

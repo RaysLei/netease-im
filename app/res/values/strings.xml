@@ -63,7 +63,7 @@
     <string name="nim_status_unlogin">未登录</string>
     <string name="nim_status_connecting">连接中\u2026</string>
     <string name="nim_status_logining">登录中\u2026</string>
-    <string name="copyright">Copyright ©1997–2018 网易公司版权所有</string>
+    <string name="copyright">Copyright ©1997–2018 ABC公司版权所有</string>
     <string name="user_not_exsit">该用户不存在</string>
     <string name="user_tips">请检查你输入的帐号是否正确</string>
     <string name="edit">编辑</string>
