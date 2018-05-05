@@ -2,8 +2,14 @@ package com.netease.nim.demo.config.preference;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.text.TextUtils;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
 import com.netease.nim.demo.DemoCache;
+
+import java.util.Collections;
+import java.util.Map;
 
 /**
  * Created by hzxuwen on 2015/4/13.
@@ -11,6 +17,20 @@ import com.netease.nim.demo.DemoCache;
 public class Preferences {
     private static final String KEY_USER_ACCOUNT = "account";
     private static final String KEY_USER_TOKEN = "token";
+    private static final String KEY_USER_INFO = "KEY_USER_INFO";
+
+    public static void saveUserInfo(Map<String, Object> data) {
+        saveString(KEY_USER_INFO, JSON.toJSONString(data));
+    }
+
+    public static Map<String, Object> getUserInfo() {
+        String string = getString(KEY_USER_INFO);
+        if (TextUtils.isEmpty(string)) {
+            return Collections.emptyMap();
+        }
+        return JSON.parseObject(string, new TypeReference<Map<String, Object>>() {
+        }.getType());
+    }
 
     public static void saveUserAccount(String account) {
         saveString(KEY_USER_ACCOUNT, account);
@@ -29,16 +49,14 @@ public class Preferences {
     }
 
     private static void saveString(String key, String value) {
-        SharedPreferences.Editor editor = getSharedPreferences().edit();
-        editor.putString(key, value);
-        editor.commit();
+        getSharedPreferences().edit().putString(key, value).apply();
     }
 
     private static String getString(String key) {
         return getSharedPreferences().getString(key, null);
     }
 
-    static SharedPreferences getSharedPreferences() {
+    private static SharedPreferences getSharedPreferences() {
         return DemoCache.getContext().getSharedPreferences("Demo", Context.MODE_PRIVATE);
     }
 }

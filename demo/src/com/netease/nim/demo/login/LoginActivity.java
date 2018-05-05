@@ -7,9 +7,13 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.text.Editable;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
+import android.support.annotation.NonNull;
 import android.text.InputFilter;
-import android.text.TextWatcher;
+import android.text.InputType;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -20,9 +24,10 @@ import android.widget.Toast;
 
 import com.netease.nim.demo.DemoCache;
 import com.netease.nim.demo.R;
+import com.netease.nim.demo.common.util.HttpCallback;
+import com.netease.nim.demo.common.util.HttpUtils;
 import com.netease.nim.demo.config.preference.Preferences;
 import com.netease.nim.demo.config.preference.UserPreferences;
-import com.netease.nim.demo.contact.ContactHttpClient;
 import com.netease.nim.demo.main.activity.MainActivity;
 import com.netease.nim.uikit.api.NimUIKit;
 import com.netease.nim.uikit.api.wrapper.NimToolBarOptions;
@@ -33,8 +38,6 @@ import com.netease.nim.uikit.common.ui.dialog.EasyAlertDialogHelper;
 import com.netease.nim.uikit.common.ui.widget.ClearableEditTextWithIcon;
 import com.netease.nim.uikit.common.util.log.LogUtil;
 import com.netease.nim.uikit.common.util.string.MD5;
-import com.netease.nim.uikit.common.util.sys.NetworkUtil;
-import com.netease.nim.uikit.common.util.sys.ScreenUtil;
 import com.netease.nim.uikit.support.permission.MPermission;
 import com.netease.nim.uikit.support.permission.annotation.OnMPermissionDenied;
 import com.netease.nim.uikit.support.permission.annotation.OnMPermissionGranted;
@@ -49,6 +52,12 @@ import com.netease.nimlib.sdk.auth.AuthService;
 import com.netease.nimlib.sdk.auth.ClientType;
 import com.netease.nimlib.sdk.auth.LoginInfo;
 
+import java.lang.ref.WeakReference;
+import java.util.HashMap;
+import java.util.Map;
+
+import okhttp3.Call;
+
 /**
  * 登录/注册界面
  * <p/>
@@ -56,26 +65,24 @@ import com.netease.nimlib.sdk.auth.LoginInfo;
  */
 public class LoginActivity extends UI implements OnKeyListener {
 
+    public static final int MSG_CHANGE_CAPTCHA_TEXT = 1;
+
     private static final String TAG = LoginActivity.class.getSimpleName();
     private static final String KICK_OUT = "KICK_OUT";
-    private final int BASIC_PERMISSION_REQUEST_CODE = 110;
+    private static final int BASIC_PERMISSION_REQUEST_CODE = 110;
 
-    private TextView rightTopBtn;  // ActionBar完成按钮
-    private TextView switchModeBtn;  // 注册/登录切换按钮
+    private TextView getCaptchaBtn;  // 获取验证码按钮
+    private TextView loginTypeBtn;  // 登录类型按钮
 
-    private ClearableEditTextWithIcon loginAccountEdit;
+    private ClearableEditTextWithIcon loginPhoneEdit;
+    private ClearableEditTextWithIcon loginCaptchaEdit;
     private ClearableEditTextWithIcon loginPasswordEdit;
 
-    private ClearableEditTextWithIcon registerAccountEdit;
-    private ClearableEditTextWithIcon registerNickNameEdit;
-    private ClearableEditTextWithIcon registerPasswordEdit;
-
-    private View loginLayout;
-    private View registerLayout;
-
     private AbortableFuture<LoginInfo> loginRequest;
-    private boolean registerMode = false; // 注册模式
-    private boolean registerPanelInited = false; // 注册面板是否初始化
+
+    private Map<String, Call> callMap = new HashMap<>();
+
+    private MyHandler myHandler;
 
     public static void start(Context context) {
         start(context, false);
@@ -105,15 +112,17 @@ public class LoginActivity extends UI implements OnKeyListener {
 
         ToolBarOptions options = new NimToolBarOptions();
         options.isNeedNavigate = false;
-        options.logoId = R.drawable.actionbar_white_logo_space;
+        options.titleId = 0;
         setToolBar(R.id.toolbar, options);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         requestBasicPermission();
 
         onParseIntent();
         initRightTopBtn();
         setupLoginPanel();
-        setupRegisterPanel();
+
+        myHandler = new MyHandler(this);
     }
 
     /**
@@ -139,13 +148,13 @@ public class LoginActivity extends UI implements OnKeyListener {
 
     @OnMPermissionGranted(BASIC_PERMISSION_REQUEST_CODE)
     public void onBasicPermissionSuccess() {
-        Toast.makeText(this, "授权成功", Toast.LENGTH_SHORT).show();
+        showToast("授权成功");
     }
 
     @OnMPermissionDenied(BASIC_PERMISSION_REQUEST_CODE)
     @OnMPermissionNeverAskAgain(BASIC_PERMISSION_REQUEST_CODE)
     public void onBasicPermissionFailed() {
-        Toast.makeText(this, "授权失败", Toast.LENGTH_SHORT).show();
+        showToast("授权失败");
     }
 
     private void onParseIntent() {
@@ -176,17 +185,11 @@ public class LoginActivity extends UI implements OnKeyListener {
      * ActionBar 右上角按钮
      */
     private void initRightTopBtn() {
-        rightTopBtn = addRegisterRightTopBtn(this, R.string.login);
-        rightTopBtn.setOnClickListener(new OnClickListener() {
+        findView(R.id.action_bar_right_clickable_textview).setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                if (registerMode) {
-                    register();
-                } else {
-                    //fakeLoginTest(); // 假登录代码示例
-                    login();
-                }
+                RegisterActivity.start(LoginActivity.this);
             }
         });
     }
@@ -195,26 +198,145 @@ public class LoginActivity extends UI implements OnKeyListener {
      * 登录面板
      */
     private void setupLoginPanel() {
-        loginAccountEdit = findView(R.id.edit_login_account);
+        loginTypeBtn = findView(R.id.tv_login_type);
+        loginTypeBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Boolean isPasswordLogin = isPasswordLogin();
+                isPasswordLogin = !isPasswordLogin;
+                loginPhoneEdit.setText(null);
+                if (isPasswordLogin) {
+                    loginPhoneEdit.setHint(R.string.login_hint_account);
+                    loginPhoneEdit.setFilters(new InputFilter[]{new InputFilter.LengthFilter(20)});
+                    loginPhoneEdit.setInputType(InputType.TYPE_CLASS_TEXT);
+                    loginPasswordEdit.setVisibility(View.VISIBLE);
+                    findView(R.id.ll_captcha_panel).setVisibility(View.GONE);
+                    loginTypeBtn.setText(R.string.login_by_captcha);
+                } else {
+                    loginPhoneEdit.setHint(R.string.login_hint_phone);
+                    loginPhoneEdit.setFilters(new InputFilter[]{new InputFilter.LengthFilter(11)});
+                    loginPhoneEdit.setInputType(InputType.TYPE_CLASS_NUMBER);
+                    loginPasswordEdit.setVisibility(View.GONE);
+                    findView(R.id.ll_captcha_panel).setVisibility(View.VISIBLE);
+                    loginTypeBtn.setText(R.string.login_by_password);
+                }
+                v.setTag(isPasswordLogin);
+            }
+        });
+
+        loginPhoneEdit = findView(R.id.edit_login_phone);
+        loginPhoneEdit.setIconResource(R.drawable.phone_icon);
+        loginPhoneEdit.setFilters(new InputFilter[]{new InputFilter.LengthFilter(11)});
+//        String account = Preferences.getUserAccount();
+//        loginPhoneEdit.setText(account);
+
+        loginCaptchaEdit = findView(R.id.edit_login_captcha);
+        loginCaptchaEdit.setIconResource(R.drawable.user_pwd_lock_icon);
+        loginCaptchaEdit.setFilters(new InputFilter[]{new InputFilter.LengthFilter(4)});
+        loginCaptchaEdit.setOnKeyListener(this);
+
         loginPasswordEdit = findView(R.id.edit_login_password);
-
-        loginAccountEdit.setIconResource(R.drawable.user_account_icon);
         loginPasswordEdit.setIconResource(R.drawable.user_pwd_lock_icon);
-
-        loginAccountEdit.setFilters(new InputFilter[]{new InputFilter.LengthFilter(32)});
-        loginPasswordEdit.setFilters(new InputFilter[]{new InputFilter.LengthFilter(32)});
-        loginAccountEdit.addTextChangedListener(textWatcher);
-        loginPasswordEdit.addTextChangedListener(textWatcher);
+        loginPasswordEdit.setFilters(new InputFilter[]{new InputFilter.LengthFilter(31)});
         loginPasswordEdit.setOnKeyListener(this);
 
-        String account = Preferences.getUserAccount();
-        loginAccountEdit.setText(account);
+        getCaptchaBtn = findView(R.id.tv_get_captcha);
+        getCaptchaBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getCaptcha(loginPhoneEdit.getText().toString());
+            }
+        });
+    }
+
+    @NonNull
+    private Boolean isPasswordLogin() {
+        Boolean isPasswordLogin = (Boolean) loginTypeBtn.getTag();
+        if (isPasswordLogin == null) {
+            isPasswordLogin = false;
+        }
+        return isPasswordLogin;
+    }
+
+
+    private void getCaptcha(String phone) {
+        if (TextUtils.isEmpty(phone)) {
+            showToast("手机号不能为空");
+            return;
+        }
+
+        final String requestName = "getCaptcha";
+
+        DialogMaker.showProgressDialog(this, null, getString(R.string.get_captcha_ing), true, new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                cancelRequest(requestName);
+            }
+        }).setCanceledOnTouchOutside(false);
+
+
+        cancelRequest(requestName);
+        Call call = HttpUtils.getCaptcha(phone, new HttpCallback() {
+
+            @Override
+            public void onResponseSuccess(Object resData) {
+                Message message = myHandler.obtainMessage(MSG_CHANGE_CAPTCHA_TEXT, 60, 1000);
+                myHandler.sendMessage(message);
+            }
+
+            @Override
+            public void onResponseFinish() {
+                super.onResponseFinish();
+                DialogMaker.dismissProgressDialog();
+            }
+        });
+        callMap.put(requestName, call);
+    }
+
+    public void onLogin(View view) {
+        LogUtil.d("onLogin", "is main thread: " + (Looper.getMainLooper() == Looper.myLooper()));
+        if (isPasswordLogin()) {
+            loginByPassword();
+        } else {
+            loginByCaptcha();
+        }
+    }
+
+    private static final class MyHandler extends Handler {
+
+        private WeakReference<LoginActivity> loginActivityWeakReference;
+
+        MyHandler(LoginActivity loginActivity) {
+            super(Looper.getMainLooper());
+            loginActivityWeakReference = new WeakReference<>(loginActivity);
+        }
+
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case MSG_CHANGE_CAPTCHA_TEXT:
+                    LoginActivity loginActivity = loginActivityWeakReference.get();
+                    if (loginActivity == null || loginActivity.isDestroyedCompatible()) {
+                        return;
+                    }
+                    if (msg.arg1 > 0) {
+                        loginActivity.getCaptchaBtn.setClickable(false);
+                        loginActivity.getCaptchaBtn.setText(loginActivity.getString(R.string.retry_get_captcha, msg.arg1 - 1));
+                        Message message = this.obtainMessage(MSG_CHANGE_CAPTCHA_TEXT, msg.arg1 - 1, msg.arg2);
+                        this.sendMessageDelayed(message, message.arg2);
+                    } else {
+                        loginActivity.getCaptchaBtn.setClickable(true);
+                        loginActivity.getCaptchaBtn.setText(R.string.get_captcha);
+                    }
+                    break;
+            }
+        }
     }
 
     /**
      * 注册面板
      */
-    private void setupRegisterPanel() {
+    /*private void setupRegisterPanel() {
         loginLayout = findView(R.id.login_layout);
         registerLayout = findView(R.id.register_layout);
         switchModeBtn = findView(R.id.register_login_tip);
@@ -225,61 +347,113 @@ public class LoginActivity extends UI implements OnKeyListener {
                 switchMode();
             }
         });
-    }
-
-    private TextWatcher textWatcher = new TextWatcher() {
-
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-            // 更新右上角按钮状态
-            if (!registerMode) {
-                // 登录模式
-                boolean isEnable = loginAccountEdit.getText().length() > 0
-                        && loginPasswordEdit.getText().length() > 0;
-                updateRightTopBtn(LoginActivity.this, rightTopBtn, isEnable);
-            }
-        }
-    };
-
-    private void updateRightTopBtn(Context context, TextView rightTopBtn, boolean isEnable) {
-        rightTopBtn.setText(R.string.done);
-        rightTopBtn.setBackgroundResource(R.drawable.g_white_btn_selector);
-        rightTopBtn.setEnabled(isEnable);
-        rightTopBtn.setTextColor(context.getResources().getColor(R.color.color_blue_0888ff));
-        rightTopBtn.setPadding(ScreenUtil.dip2px(10), 0, ScreenUtil.dip2px(10), 0);
-    }
+    }*/
 
     /**
      * ***************************************** 登录 **************************************
      */
 
-    private void login() {
+    private void loginByPassword() {
+        String account = loginPhoneEdit.getText().toString().trim();
+        if (TextUtils.isEmpty(account)) {
+            showToast("账号不能为空");
+            return;
+        }
+        String password = loginPasswordEdit.getText().toString().trim();
+        if (TextUtils.isEmpty(password)) {
+            showToast("密码不能为空");
+            return;
+        } else if (password.length() < 6 || password.length() > 20) {
+            showToast("密码无效");
+            return;
+        }
+
+        final String requestName = "loginByPassword";
         DialogMaker.showProgressDialog(this, null, getString(R.string.logining), true, new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
+                cancelRequest(requestName);
                 if (loginRequest != null) {
                     loginRequest.abort();
-                    onLoginDone();
                 }
+                onLoginDone();
             }
         }).setCanceledOnTouchOutside(false);
 
+        Call call = HttpUtils.loginByPassword(account, password, new HttpCallback() {
+
+            @Override
+            public void onResponseSuccess(Object resData) {
+                //noinspection unchecked
+                Map<String, Object> data = (Map<String, Object>) resData;
+                Preferences.saveUserInfo(data);
+                String userId = (String) data.get("userId");
+                String token = (String) data.get("token");
+                imLogin(userId, token);
+            }
+
+            @Override
+            public void onResponseFailure(int status, String message) {
+                super.onResponseFailure(status, message);
+                DialogMaker.dismissProgressDialog();
+            }
+        });
+        callMap.put(requestName, call);
+    }
+
+    private void loginByCaptcha() {
+        String phone = loginPhoneEdit.getText().toString().trim();
+        if (TextUtils.isEmpty(phone)) {
+            showToast("手机号不能为空");
+            return;
+        }
+        String captcha = loginCaptchaEdit.getText().toString().trim();
+        if (TextUtils.isEmpty(captcha)) {
+            showToast("验证码不能为空");
+            return;
+        } else if (captcha.length() != 4) {
+            showToast("验证码无效");
+            return;
+        }
+
+        final String requestName = "loginByCaptcha";
+        DialogMaker.showProgressDialog(this, null, getString(R.string.logining), true, new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                cancelRequest(requestName);
+                if (loginRequest != null) {
+                    loginRequest.abort();
+                }
+                onLoginDone();
+            }
+        }).setCanceledOnTouchOutside(false);
+
+        Call call = HttpUtils.loginByCaptcha(phone, captcha, new HttpCallback() {
+
+            @Override
+            public void onResponseSuccess(Object resData) {
+                    //noinspection unchecked
+                    Map<String, Object> data = (Map<String, Object>) resData;
+                    Preferences.saveUserInfo(data);
+                    String userId = (String) data.get("userId");
+                    String token = (String) data.get("token");
+                    imLogin(userId, token);
+            }
+
+            @Override
+            public void onResponseFailure(int status, String message) {
+                super.onResponseFailure(status, message);
+                DialogMaker.dismissProgressDialog();
+            }
+        });
+        callMap.put(requestName, call);
+    }
+
+    private void imLogin(final String account, final String token) {
         // 云信只提供消息通道，并不包含用户资料逻辑。开发者需要在管理后台或通过服务器接口将用户帐号和token同步到云信服务器。
         // 在这里直接使用同步到云信服务器的帐号和token登录。
         // 这里为了简便起见，demo就直接使用了密码的md5作为token。
         // 如果开发者直接使用这个demo，只更改appkey，然后就登入自己的账户体系的话，需要传入同步到云信服务器的token，而不是用户密码。
-        final String account = loginAccountEdit.getEditableText().toString().toLowerCase();
-        final String token = tokenFromPassword(loginPasswordEdit.getEditableText().toString());
         // 登录
         loginRequest = NimUIKit.login(new LoginInfo(account, token), new RequestCallback<LoginInfo>() {
             @Override
@@ -363,57 +537,53 @@ public class LoginActivity extends UI implements OnKeyListener {
         return null;
     }
 
-    /**
-     * ***************************************** 注册 **************************************
-     */
+//    private void register() {
+//        if (!registerMode || !registerPanelInited) {
+//            return;
+//        }
+//
+//        if (!checkRegisterContentValid()) {
+//            return;
+//        }
+//
+//        if (!NetworkUtil.isNetAvailable(LoginActivity.this)) {
+//            Toast.makeText(LoginActivity.this, R.string.network_is_not_available, Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//
+//        DialogMaker.showProgressDialog(this, getString(R.string.registering), false);
+//
+//        // 注册流程
+//        final String account = registerAccountEdit.getText().toString();
+//        final String nickName = registerNickNameEdit.getText().toString();
+//        final String password = registerPasswordEdit.getText().toString();
+//
+//        ContactHttpClient.getInstance().register(account, nickName, password, new ContactHttpClient.ContactHttpCallback<Void>() {
+//            @Override
+//            public void onSuccess(Void aVoid) {
+//                Toast.makeText(LoginActivity.this, R.string.register_success, Toast.LENGTH_SHORT).show();
+//                switchMode();  // 切换回登录
+//                loginPhoneEdit.setText(account);
+//                loginCaptchaEdit.setText(password);
+//
+//                registerAccountEdit.setText("");
+//                registerNickNameEdit.setText("");
+//                registerPasswordEdit.setText("");
+//
+//                DialogMaker.dismissProgressDialog();
+//            }
+//
+//            @Override
+//            public void onFailed(int code, String errorMsg) {
+//                Toast.makeText(LoginActivity.this, getString(R.string.register_failed, String.valueOf(code), errorMsg), Toast.LENGTH_SHORT)
+//                        .show();
+//
+//                DialogMaker.dismissProgressDialog();
+//            }
+//        });
+//    }
 
-    private void register() {
-        if (!registerMode || !registerPanelInited) {
-            return;
-        }
-
-        if (!checkRegisterContentValid()) {
-            return;
-        }
-
-        if (!NetworkUtil.isNetAvailable(LoginActivity.this)) {
-            Toast.makeText(LoginActivity.this, R.string.network_is_not_available, Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        DialogMaker.showProgressDialog(this, getString(R.string.registering), false);
-
-        // 注册流程
-        final String account = registerAccountEdit.getText().toString();
-        final String nickName = registerNickNameEdit.getText().toString();
-        final String password = registerPasswordEdit.getText().toString();
-
-        ContactHttpClient.getInstance().register(account, nickName, password, new ContactHttpClient.ContactHttpCallback<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                Toast.makeText(LoginActivity.this, R.string.register_success, Toast.LENGTH_SHORT).show();
-                switchMode();  // 切换回登录
-                loginAccountEdit.setText(account);
-                loginPasswordEdit.setText(password);
-
-                registerAccountEdit.setText("");
-                registerNickNameEdit.setText("");
-                registerPasswordEdit.setText("");
-
-                DialogMaker.dismissProgressDialog();
-            }
-
-            @Override
-            public void onFailed(int code, String errorMsg) {
-                Toast.makeText(LoginActivity.this, getString(R.string.register_failed, String.valueOf(code), errorMsg), Toast.LENGTH_SHORT)
-                        .show();
-
-                DialogMaker.dismissProgressDialog();
-            }
-        });
-    }
-
-    private boolean checkRegisterContentValid() {
+    /*private boolean checkRegisterContentValid() {
         if (!registerMode || !registerPanelInited) {
             return false;
         }
@@ -443,12 +613,9 @@ public class LoginActivity extends UI implements OnKeyListener {
         }
 
         return true;
-    }
+    }*/
 
-    /**
-     * ***************************************** 注册/登录切换 **************************************
-     */
-    private void switchMode() {
+    /*private void switchMode() {
         registerMode = !registerMode;
 
         if (registerMode && !registerPanelInited) {
@@ -478,30 +645,30 @@ public class LoginActivity extends UI implements OnKeyListener {
         if (registerMode) {
             rightTopBtn.setEnabled(true);
         } else {
-            boolean isEnable = loginAccountEdit.getText().length() > 0
-                    && loginPasswordEdit.getText().length() > 0;
+            boolean isEnable = loginPhoneEdit.getText().length() > 0
+                    && loginCaptchaEdit.getText().length() > 0;
             rightTopBtn.setEnabled(isEnable);
         }
-    }
+    }*/
 
-    public TextView addRegisterRightTopBtn(UI activity, int strResId) {
-        String text = activity.getResources().getString(strResId);
-        TextView textView = findView(R.id.action_bar_right_clickable_textview);
-        textView.setText(text);
-        if (textView != null) {
-            textView.setBackgroundResource(R.drawable.register_right_top_btn_selector);
-            textView.setPadding(ScreenUtil.dip2px(10), 0, ScreenUtil.dip2px(10), 0);
-        }
-        return textView;
-    }
+//    public TextView addRegisterRightTopBtn(UI activity, int strResId) {
+//        String text = activity.getResources().getString(strResId);
+//        TextView textView = findView(R.id.action_bar_right_clickable_textview);
+//        textView.setText(text);
+//        if (textView != null) {
+//            textView.setBackgroundResource(R.drawable.register_right_top_btn_selector);
+//            textView.setPadding(ScreenUtil.dip2px(10), 0, ScreenUtil.dip2px(10), 0);
+//        }
+//        return textView;
+//    }
 
     /**
      * *********** 假登录示例：假登录后，可以查看该用户数据，但向云信发送数据会失败；随后手动登录后可以发数据 **************
      */
     private void fakeLoginTest() {
         // 获取账号、密码；账号用于假登录，密码在手动登录时需要
-        final String account = loginAccountEdit.getEditableText().toString().toLowerCase();
-        final String token = tokenFromPassword(loginPasswordEdit.getEditableText().toString());
+        final String account = loginPhoneEdit.getEditableText().toString().toLowerCase();
+        final String token = tokenFromPassword(loginCaptchaEdit.getEditableText().toString());
 
         // 执行假登录
         boolean res = NIMClient.getService(AuthService.class).openLocalCache(account); // SDK会将DB打开，支持查询。
@@ -540,5 +707,32 @@ public class LoginActivity extends UI implements OnKeyListener {
                 });
             }
         }, 15 * 1000);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        DialogMaker.dismissProgressDialog();
+        cancelAllRequest();
+        myHandler.removeCallbacksAndMessages(null);
+    }
+
+    private void cancelAllRequest() {
+        for (Call call : callMap.values()) {
+            if (!call.isCanceled()) {
+                call.cancel();
+            }
+        }
+        callMap.clear();
+    }
+
+    private void cancelRequest(String requestName) {
+        Call call = callMap.get(requestName);
+        if (call != null) {
+            if (!call.isCanceled()) {
+                call.cancel();
+            }
+            callMap.remove(requestName);
+        }
     }
 }

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Toast;
 
 import com.netease.nim.uikit.common.fragment.TFragment;
 import com.netease.nim.uikit.common.util.log.LogUtil;
@@ -303,4 +305,18 @@ public abstract class UI extends AppCompatActivity {
         return (T) (findViewById(resId));
     }
 
+    protected void showToast(String message) {
+        if (!TextUtils.isEmpty(message)) {
+            if (Looper.myLooper() == Looper.getMainLooper()) {
+                Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+            } else {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(UI.this, message, Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        }
+    }
 }

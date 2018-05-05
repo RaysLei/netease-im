@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">云信 Demo</string>
+    <string name="app_name">IM</string>
     <string name="empty"></string>
     <string name="main_tab_session">会话</string>
     <string name="main_tab_contact">通讯录</string>
     <string name="user_profile">个人名片</string>
     <string name="login">登录</string>
     <string name="logining">登录中\u2026</string>
+    <string name="get_captcha_ing">获取验证码中\u2026</string>
     <string name="register">注册</string>
     <string name="registering">注册中\u2026</string>
     <string name="agree">同意</string>
     <string name="reject">拒绝</string>
     <string name="network_is_not_available">网络连接失败，请检查你的网络设置</string>
+    <string name="login_by_password">使用密码登录</string>
+    <string name="login_by_captcha">使用验证码登录</string>
+    <string name="get_captcha">获取验证码</string>
+    <string name="retry_get_captcha">重新获取(%ds)</string>
+    <string name="login_hint_phone">请输入手机号</string>
+    <string name="login_hint_captcha">请输入验证码</string>
     <string name="login_hint_account">请输入帐号</string>
     <string name="login_hint_password">请输入密码</string>
+    <string name="register_hint_password">密码：6~20字母或者数字</string>
+    <string name="register_hint_introducer">请输入邀请码</string>
+    <string name="register_hint_nickname">请输入昵称</string>
     <string name="input_account">请输入帐号，限20位字母或者数字</string>
     <string name="register_account_tip">帐号限20位字母或者数字</string>
     <string name="input_nickname">请输入昵称，限10位汉字、字母或者数字</string>
@@ -24,7 +34,7 @@
     <string name="register_failed">注册失败,错误码%1$s:%2$s</string>
     <string name="login_has_account">已有帐号？直接登录</string>
     <string name="done">完成</string>
-    <string name="prepare_data">正在准备数据...</string>
+    <string name="prepare_data">正在准备数据\u2026</string>
 
     <string name="readed">已读</string>
     <string name="unread">未读</string>
@@ -51,9 +61,9 @@
     <string name="search_advanced_team">搜索高级群</string>
     <string name="net_broken">当前网络不可用</string>
     <string name="nim_status_unlogin">未登录</string>
-    <string name="nim_status_connecting">连接中...</string>
-    <string name="nim_status_logining">登录中...</string>
-    <string name="copyright">Copyright ©1997-2018 网易公司版权所有</string>
+    <string name="nim_status_connecting">连接中\u2026</string>
+    <string name="nim_status_logining">登录中\u2026</string>
+    <string name="copyright">Copyright ©1997–2018 网易公司版权所有</string>
     <string name="user_not_exsit">该用户不存在</string>
     <string name="user_tips">请检查你输入的帐号是否正确</string>
     <string name="edit">编辑</string>

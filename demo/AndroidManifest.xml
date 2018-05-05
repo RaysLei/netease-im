@@ -142,6 +142,13 @@
             android:theme="@style/LoginTheme"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
+        <activity android:name=".login.RegisterActivity"
+            android:configChanges="orientation"
+            android:label="@string/register"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+
         <!-- 关于 -->
         <activity
             android:name=".main.activity.AboutActivity"
