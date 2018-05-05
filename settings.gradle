@@ -1,5 +1,5 @@
 include ':uikit' 
-include ':demo' 
+include ':app'
 include ':faceunity' 
 include ':jrmfRpWalletlib'
 include ':avchatkit'
