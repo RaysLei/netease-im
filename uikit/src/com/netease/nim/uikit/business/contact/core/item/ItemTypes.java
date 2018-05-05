@@ -2,7 +2,7 @@ package com.netease.nim.uikit.business.contact.core.item;
 
 /**
  * 通讯录列表项类型
- * Created by huangjun on 2015/2/10.
+ * Created on 2015/2/10.
  */
 public interface ItemTypes {
 

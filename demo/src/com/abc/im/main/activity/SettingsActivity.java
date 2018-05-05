@@ -46,7 +46,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by hzxuwen on 2015/6/26.
+ * Created on 2015/6/26.
  */
 public class SettingsActivity extends UI implements SettingsAdapter.SwitchChangeListener {
     private static final int TAG_HEAD = 1;

@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 涂鸦板通道（输入通道，输出通道）
  * <p/>
- * Created by huangjun on 2015/6/29.
+ * Created on 2015/6/29.
  */
 class DoodleChannel {
     /**

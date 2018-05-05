@@ -54,7 +54,7 @@ import com.netease.nimlib.sdk.avchat.model.AVChatVideoFrame;
  * 4、切换音视频
  * 5、通知栏提醒
  * 6、faceU
- * Created by winnie on 2017/12/10.
+ * Created on 2017/12/10.
  */
 
 public class AVChatActivity extends UI implements AVChatVideoUI.TouchZoneCallback, AVSwitchListener {

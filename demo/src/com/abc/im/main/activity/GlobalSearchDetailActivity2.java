@@ -34,7 +34,7 @@ import java.util.List;
 
 /**
  * 消息全文检索详细页面
- * Created by huangjun on 2016/6/28.
+ * Created on 2016/6/28.
  */
 public class GlobalSearchDetailActivity2 extends UI implements OnItemClickListener {
 

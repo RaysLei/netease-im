@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Created by hzchenkang on 2017/6/28.
+ * Created on 2017/6/28.
  * 适用于robot消息容器及LinkElement容器
  */
 

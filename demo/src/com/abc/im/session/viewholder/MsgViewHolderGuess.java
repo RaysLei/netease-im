@@ -8,7 +8,7 @@ import com.netease.nim.uikit.business.session.viewholder.MsgViewHolderBase;
 import com.netease.nim.uikit.common.ui.recyclerview.adapter.BaseMultiItemFetchLoadAdapter;
 
 /**
- * Created by hzliuxuanlin on 17/9/15.
+ * Created on 17/9/15.
  */
 
 public class MsgViewHolderGuess extends MsgViewHolderBase {

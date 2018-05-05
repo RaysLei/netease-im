@@ -21,7 +21,7 @@ import com.netease.nimlib.sdk.msg.constant.AttachStatusEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
 
 /**
- * Created by hzxuwen on 2016/12/14.
+ * Created on 2016/12/14.
  */
 
 public class FileDownloadActivity extends UI {

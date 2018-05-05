@@ -7,7 +7,7 @@ import android.graphics.Path;
 /**
  * 路径
  * <p/>
- * Created by Administrator on 2015/6/24.
+ * Created on 2015/6/24.
  */
 public class MyPath extends Action {
     private Path path;

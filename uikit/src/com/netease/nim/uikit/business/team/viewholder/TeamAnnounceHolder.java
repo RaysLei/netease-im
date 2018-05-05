@@ -9,7 +9,7 @@ import com.netease.nim.uikit.common.adapter.TViewHolder;
 import com.netease.nim.uikit.common.util.sys.TimeUtil;
 
 /**
- * Created by hzxuwen on 2015/3/20.
+ * Created on 2015/3/20.
  */
 public class TeamAnnounceHolder extends TViewHolder {
 

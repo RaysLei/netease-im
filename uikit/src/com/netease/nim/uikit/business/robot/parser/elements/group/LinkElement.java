@@ -9,7 +9,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by huangjun on 2017/6/22.
+ * Created on 2017/6/22.
  * <p>
  * <link type="block" style="button" target="block_id_1" params="orderId=4513" >
  * <image name="p_img" url="xxx.jpg"/>

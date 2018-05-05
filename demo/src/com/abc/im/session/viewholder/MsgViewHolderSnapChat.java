@@ -20,7 +20,7 @@ import com.netease.nimlib.sdk.msg.constant.AttachStatusEnum;
 import com.netease.nimlib.sdk.msg.constant.MsgStatusEnum;
 
 /**
- * Created by zhoujianghua on 2015/8/7.
+ * Created on 2015/8/7.
  */
 public class MsgViewHolderSnapChat extends MsgViewHolderBase {
 

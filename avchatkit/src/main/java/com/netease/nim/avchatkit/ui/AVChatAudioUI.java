@@ -30,7 +30,7 @@ import com.netease.nimlib.sdk.avchat.model.AVChatData;
 
 /**
  * 音频界面显示变化以及点击事件
- * Created by winnie on 2017/12/10.
+ * Created on 2017/12/10.
  */
 
 public class AVChatAudioUI implements View.OnClickListener, ToggleListener{

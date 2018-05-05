@@ -5,7 +5,7 @@ import android.content.Context;
 
 /**
  * 音视频初始化配置
- * Created by winnie on 2017/12/7.
+ * Created on 2017/12/7.
  */
 
 public class AVChatOptions {

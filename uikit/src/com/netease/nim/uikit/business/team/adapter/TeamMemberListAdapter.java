@@ -13,7 +13,7 @@ import com.netease.nimlib.sdk.team.model.TeamMember;
 import java.util.List;
 
 /**
- * Created by hzchenkang on 2016/12/2.
+ * Created on 2016/12/2.
  */
 
 public class TeamMemberListAdapter extends RecyclerView.Adapter<TeamMemberListHolder>

@@ -21,7 +21,7 @@ import com.netease.nimlib.sdk.msg.constant.MsgTypeEnum;
 import java.io.File;
 
 /**
- * Created by zhoujianghua on 2015/8/4.
+ * Created on 2015/8/4.
  */
 public abstract class MsgViewHolderThumbBase extends MsgViewHolderBase {
 

@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * 悬浮在屏幕上的红点拖拽动画绘制区域
  * <p>
- * Created by huangjun on 2016/9/13.
+ * Created on 2016/9/13.
  */
 public class DropCover extends View {
 

@@ -1,7 +1,7 @@
 package com.netease.nim.uikit.business.ait.selector.model;
 
 /**
- * Created by hzchenkang on 2017/6/21.
+ * Created on 2017/6/21.
  */
 
 public class AitContactItem<T> {

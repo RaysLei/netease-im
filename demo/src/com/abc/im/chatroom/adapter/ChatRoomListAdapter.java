@@ -12,7 +12,7 @@ import com.netease.nimlib.sdk.chatroom.model.ChatRoomInfo;
 
 /**
  * 聊天室列表数据适配器
- * Created by huangjun on 2016/12/9.
+ * Created on 2016/12/9.
  */
 public class ChatRoomListAdapter extends BaseQuickAdapter<ChatRoomInfo, BaseViewHolder> {
     private final static int COUNT_LIMIT = 10000;

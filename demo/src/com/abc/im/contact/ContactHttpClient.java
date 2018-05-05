@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * 通讯录数据获取协议的实现
  * <p/>
- * Created by huangjun on 2015/3/6.
+ * Created on 2015/3/6.
  */
 public class ContactHttpClient {
     private static final String TAG = "ContactHttpClient";

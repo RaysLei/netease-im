@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * 群成员数据源提供者
  * <p/>
- * Created by huangjun on 2015/5/4.
+ * Created on 2015/5/4.
  */
 public class TeamMemberDataProvider {
     public static final List<AbsContactItem> provide(TextQuery query, String tid) {

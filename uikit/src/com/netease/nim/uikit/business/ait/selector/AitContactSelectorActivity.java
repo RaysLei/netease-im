@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by hzchenkang on 2017/6/21.
+ * Created on 2017/6/21.
  */
 
 public class AitContactSelectorActivity extends UI {

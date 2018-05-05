@@ -40,7 +40,7 @@ import com.netease.nimlib.sdk.search.model.MsgIndexRecord;
  * 全局搜索页面
  * 支持通讯录搜索、消息全文检索
  * <p/>
- * Created by huangjun on 2015/4/13.
+ * Created on 2015/4/13.
  */
 public class GlobalSearchActivity extends UI implements OnItemClickListener {
 

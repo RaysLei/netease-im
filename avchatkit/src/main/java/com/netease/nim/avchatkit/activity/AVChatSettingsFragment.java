@@ -12,7 +12,7 @@ import com.netease.nim.avchatkit.R;
 
 
 /**
- * Created by liuqijun on 7/19/16.
+ * Created on 7/19/16.
  */
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class AVChatSettingsFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {

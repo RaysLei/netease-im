@@ -1,7 +1,7 @@
 package com.netease.nim.avchatkit.module;
 
 /**
- * Created by winnie on 2017/12/10.
+ * Created on 2017/12/10.
  */
 
 public interface AVChatControllerCallback<T> {

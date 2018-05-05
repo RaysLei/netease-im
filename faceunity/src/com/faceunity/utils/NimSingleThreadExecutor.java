@@ -7,7 +7,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 /**
- * Created by huangjun on 2015/3/12.
+ * Created on 2015/3/12.
  */
 public class NimSingleThreadExecutor {
 

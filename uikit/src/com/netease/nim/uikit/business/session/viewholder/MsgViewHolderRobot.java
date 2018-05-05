@@ -17,7 +17,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by hzchenkang on 2017/6/26.
+ * Created on 2017/6/26.
  */
 
 public class MsgViewHolderRobot extends MsgViewHolderText implements RobotContentLinearLayout.ClickableChildView {

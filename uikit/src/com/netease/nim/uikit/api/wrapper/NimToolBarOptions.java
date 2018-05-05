@@ -4,7 +4,7 @@ import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.common.activity.ToolBarOptions;
 
 /**
- * Created by hzxuwen on 2016/6/16.
+ * Created on 2016/6/16.
  */
 public class NimToolBarOptions extends ToolBarOptions {
 

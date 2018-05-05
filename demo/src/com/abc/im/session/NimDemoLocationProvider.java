@@ -13,7 +13,7 @@ import com.netease.nim.uikit.common.util.log.LogUtil;
 import com.netease.nim.uikit.api.model.location.LocationProvider;
 
 /**
- * Created by zhoujianghua on 2015/8/11.
+ * Created on 2015/8/11.
  */
 public class NimDemoLocationProvider implements LocationProvider {
     @Override

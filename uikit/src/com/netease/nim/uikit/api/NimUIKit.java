@@ -44,7 +44,7 @@ import java.util.Set;
 
 /**
  * 云信UI组件接口/定制化入口
- * Created by huangjun on 2017/9/29.
+ * Created on 2017/9/29.
  */
 
 public class NimUIKit {

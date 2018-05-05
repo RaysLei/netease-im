@@ -38,7 +38,7 @@ import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 import java.io.File;
 
 /**
- * Created by hzxuwen on 2015/9/14.
+ * Created on 2015/9/14.
  */
 public class UserProfileSettingActivity extends UI implements View.OnClickListener {
     private final String TAG = UserProfileSettingActivity.class.getSimpleName();

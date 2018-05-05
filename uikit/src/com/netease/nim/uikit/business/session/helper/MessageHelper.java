@@ -9,7 +9,7 @@ import com.netease.nimlib.sdk.msg.model.CustomMessageConfig;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
 
 /**
- * Created by hzxuwen on 2016/8/19.
+ * Created on 2016/8/19.
  */
 public class MessageHelper {
 

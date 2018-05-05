@@ -15,7 +15,7 @@ import com.netease.nim.avchatkit.teamavchat.module.TeamAVChatVoiceMuteItem;
 import java.util.List;
 
 /**
- * Created by hzchenkang on 2017/5/9.
+ * Created on 2017/5/9.
  */
 
 public class TeamAVChatVoiceMuteAdapter extends BaseAdapter {

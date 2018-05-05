@@ -1,7 +1,7 @@
 package com.netease.nim.uikit.business.ait;
 
 /**
- * Created by hzchenkang on 2017/7/10.
+ * Created on 2017/7/10.
  */
 
 public interface AitTextChangeListener {

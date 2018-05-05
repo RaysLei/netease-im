@@ -5,7 +5,7 @@ import com.abc.im.main.model.MainTab;
 
 /**
  * 聊天室主TAB页
- * Created by huangjun on 2015/12/11.
+ * Created on 2015/12/11.
  */
 public class ChatRoomListFragment extends MainTabFragment {
     private com.abc.im.chatroom.fragment.ChatRoomListFragment fragment;

@@ -5,7 +5,7 @@ import com.netease.nim.uikit.business.session.activity.WatchMessagePictureActivi
 import com.netease.nim.uikit.common.ui.recyclerview.adapter.BaseMultiItemFetchLoadAdapter;
 
 /**
- * Created by zhoujianghua on 2015/8/4.
+ * Created on 2015/8/4.
  */
 public class MsgViewHolderPicture extends MsgViewHolderThumbBase {
 

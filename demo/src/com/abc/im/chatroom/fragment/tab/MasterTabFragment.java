@@ -5,7 +5,7 @@ import com.abc.im.chatroom.fragment.MasterFragment;
 
 /**
  * 主播基类fragment
- * Created by hzxuwen on 2015/12/14.
+ * Created on 2015/12/14.
  */
 public class MasterTabFragment extends ChatRoomTabFragment {
     private MasterFragment fragment;

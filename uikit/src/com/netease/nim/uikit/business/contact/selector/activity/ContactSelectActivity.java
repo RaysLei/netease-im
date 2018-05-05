@@ -52,7 +52,7 @@ import java.util.List;
 /**
  * 联系人选择器
  * <p/>
- * Created by huangjun on 2015/3/3.
+ * Created on 2015/3/3.
  */
 public class ContactSelectActivity extends UI implements View.OnClickListener, android.support.v7.widget.SearchView.OnQueryTextListener {
 

@@ -3,7 +3,7 @@ package com.abc.im.session.extension;
 import com.alibaba.fastjson.JSONObject;
 
 /**
- * Created by zhoujianghua on 2015/4/10.
+ * Created on 2015/4/10.
  */
 public class DefaultCustomAttachment extends CustomAttachment {
 

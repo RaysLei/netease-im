@@ -32,7 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by zhoujianghua on 2015/7/7.
+ * Created on 2015/7/7.
  */
 public class SearchMessageActivity extends UI {
 

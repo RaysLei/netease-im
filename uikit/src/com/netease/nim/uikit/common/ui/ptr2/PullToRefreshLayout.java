@@ -7,7 +7,7 @@ import android.util.AttributeSet;
 
 /**
  * 下拉刷新控件，可以配合 RecyclerView，Scrollview，ListView
- * Created by fish on 16/5/17.
+ * Created on 16/5/17.
  */
 public class PullToRefreshLayout extends SuperSwipeRefreshLayout {
 

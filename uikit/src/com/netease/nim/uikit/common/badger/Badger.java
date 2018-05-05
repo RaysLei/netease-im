@@ -13,7 +13,7 @@ import me.leolin.shortcutbadger.ShortcutBadger;
  * APP图标未读数红点更新接口
  * https://github.com/leolin310148/ShortcutBadger
  * <p>
- * Created by huangjun on 2017/7/25.
+ * Created on 2017/7/25.
  */
 
 public class Badger {

@@ -11,7 +11,7 @@ import com.netease.nim.uikit.business.robot.parser.elements.element.ImageElement
 import com.netease.nim.uikit.common.ui.imageview.MsgThumbImageView;
 
 /**
- * Created by hzchenkang on 2017/6/26.
+ * Created on 2017/6/26.
  */
 
 public class RobotImageView extends RobotViewBase<ImageElement> {

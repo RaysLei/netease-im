@@ -1,7 +1,7 @@
 package com.netease.nim.uikit.business.session.constant;
 
 /**
- * Created by zhoujianghua on 2015/8/11.
+ * Created on 2015/8/11.
  */
 public interface Extras {
 

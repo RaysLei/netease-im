@@ -6,7 +6,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.netease.nimlib.sdk.msg.attachment.FileAttachment;
 
 /**
- * Created by zhoujianghua on 2015/7/8.
+ * Created on 2015/7/8.
  */
 public class SnapChatAttachment extends FileAttachment {
 

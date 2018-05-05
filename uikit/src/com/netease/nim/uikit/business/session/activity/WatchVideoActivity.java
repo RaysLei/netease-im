@@ -43,7 +43,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 /**
  * 视频播放界面
  * <p/>
- * Created by huangjun on 2015/4/11.
+ * Created on 2015/4/11.
  */
 public class WatchVideoActivity extends UI implements Callback {
     public static final String INTENT_EXTRA_DATA = "EXTRA_DATA";

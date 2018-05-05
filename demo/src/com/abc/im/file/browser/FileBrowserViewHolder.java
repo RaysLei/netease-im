@@ -13,7 +13,7 @@ import com.netease.nim.uikit.common.adapter.TViewHolder;
 import java.io.File;
 
 /**
- * Created by hzxuwen on 2015/4/17.
+ * Created on 2015/4/17.
  */
 public class FileBrowserViewHolder extends TViewHolder {
     private ImageView fileImage;

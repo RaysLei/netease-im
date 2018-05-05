@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.nio.channels.FileChannel;
 
 /**
- * Created by huangjun on 2017/3/7.
+ * Created on 2017/3/7.
  */
 
 public class FileUtils {

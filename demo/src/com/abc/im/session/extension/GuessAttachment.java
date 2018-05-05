@@ -5,7 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import java.util.Random;
 
 /**
- * Created by zhoujianghua on 2015/4/9.
+ * Created on 2015/4/9.
  */
 public class GuessAttachment extends CustomAttachment {
 

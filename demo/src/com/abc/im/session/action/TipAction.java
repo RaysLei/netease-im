@@ -8,7 +8,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 
 /**
  * Tip类型消息测试
- * Created by hzxuwen on 2016/3/9.
+ * Created on 2016/3/9.
  */
 public class TipAction extends BaseAction {
 

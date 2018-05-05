@@ -8,7 +8,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by huangjun on 2017/6/22.
+ * Created on 2017/6/22.
  * <p>
  * <LinearLayout> 节点下面存在三种节点，分别是 <text> 、 <image> 和 <link> ；
  * 目前的静态组合形式有 <text> +Array( <link> )， <image> ，Array( <link> )

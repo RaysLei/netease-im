@@ -22,7 +22,7 @@ import com.netease.nim.uikit.common.activity.UI;
 import com.netease.nim.uikit.common.util.string.StringUtil;
 
 /**
- * Created by hzxuwen on 2015/3/19.
+ * Created on 2015/3/19.
  */
 public class AdvancedTeamNicknameActivity extends UI implements TextWatcher, View.OnClickListener {
 

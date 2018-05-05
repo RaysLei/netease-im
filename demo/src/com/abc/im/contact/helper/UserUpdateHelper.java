@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by hzxuwen on 2015/9/17.
+ * Created on 2015/9/17.
  */
 public class UserUpdateHelper {
     private static final String TAG = UserUpdateHelper.class.getSimpleName();

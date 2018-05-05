@@ -23,7 +23,7 @@ import org.adw.library.widgets.discreteseekbar.DiscreteSeekBar;
 /**
  * Face Unity UI布局适配器及事件响应封装，绑定布局文件 faceu_layout.xml
  * <p>
- * Created by huangjun on 2017/7/13.
+ * Created on 2017/7/13.
  */
 
 public class FaceULayout implements View.OnClickListener {

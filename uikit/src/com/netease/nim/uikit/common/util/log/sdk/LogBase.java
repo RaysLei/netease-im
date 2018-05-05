@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
  * 日志基类
  * 保证open/write/close/flush都在同个线程操作
  * <p>
- * Created by huangjun on 2017/3/7.
+ * Created on 2017/3/7.
  */
 
 public abstract class LogBase {

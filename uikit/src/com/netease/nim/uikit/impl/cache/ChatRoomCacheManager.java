@@ -4,7 +4,7 @@ import com.netease.nim.uikit.impl.NimUIKitImpl;
 import com.netease.nimlib.sdk.chatroom.model.ChatRoomMember;
 
 /**
- * Created by hzchenkang on 2017/10/18.
+ * Created on 2017/10/18.
  * <p>
  * 聊天室相关业务缓存生命周期管理
  */

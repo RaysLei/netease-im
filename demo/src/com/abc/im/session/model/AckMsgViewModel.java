@@ -7,7 +7,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 import com.netease.nimlib.sdk.msg.model.TeamMsgAckInfo;
 
 /**
- * Created by winnie on 2018/3/17.
+ * Created on 2018/3/17.
  */
 
 public class AckMsgViewModel extends ViewModel {

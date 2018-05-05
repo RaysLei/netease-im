@@ -46,7 +46,7 @@ import java.util.Set;
 /**
  * 系统消息中心界面
  * <p/>
- * Created by huangjun on 2015/3/18.
+ * Created on 2015/3/18.
  */
 public class SystemMessageActivity extends UI implements TAdapterDelegate,
         AutoRefreshListView.OnRefreshListener, SystemMessageViewHolder.SystemMessageListener {

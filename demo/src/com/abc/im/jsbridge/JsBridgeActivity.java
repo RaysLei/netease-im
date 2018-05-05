@@ -24,7 +24,7 @@ import com.netease.nimlib.jsbridge.util.Base64;
 import com.netease.nimlib.jsbridge.util.WebViewConfig;
 
 /**
- * Created by hzliuxuanlin on 2016/10/21.
+ * Created on 2016/10/21.
  */
 
 public class JsBridgeActivity extends UI {

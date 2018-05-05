@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by hzchenkang on 2017/8/2.
+ * Created on 2017/8/2.
  * <p>
  * 结合observeReceiveMessage、observeRecentContact 做一个应用层面的消息过滤，过滤掉与自己无关的拆红包消息
  * 前提是RpOpenedMessageFilter 必须先于其他ReceiveMessage、RecentContact 观察者之前注册

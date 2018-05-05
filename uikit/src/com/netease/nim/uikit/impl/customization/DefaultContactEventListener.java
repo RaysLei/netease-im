@@ -10,7 +10,7 @@ import com.netease.nim.uikit.api.model.contact.ContactEventListener;
  * <p>
  * DefaultContactEventListener 提供了默认处理，其中点击Item 和 Avatar 响应为打开P2P聊天界面
  * <p>
- * Created by hzchenkang on 2016/12/21.
+ * Created on 2016/12/21.
  */
 
 public class DefaultContactEventListener implements ContactEventListener {

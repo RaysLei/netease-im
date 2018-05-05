@@ -11,7 +11,7 @@ import com.netease.nim.uikit.impl.NimUIKitImpl;
 import com.netease.nimlib.sdk.msg.attachment.LocationAttachment;
 
 /**
- * Created by zhoujianghua on 2015/8/7.
+ * Created on 2015/8/7.
  */
 public class MsgViewHolderLocation extends MsgViewHolderBase {
 

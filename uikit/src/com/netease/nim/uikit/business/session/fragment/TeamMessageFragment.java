@@ -8,7 +8,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 import com.netease.nimlib.sdk.team.model.Team;
 
 /**
- * Created by zhoujianghua on 2015/9/10.
+ * Created on 2015/9/10.
  */
 public class TeamMessageFragment extends MessageFragment {
 

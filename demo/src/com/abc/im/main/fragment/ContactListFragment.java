@@ -36,7 +36,7 @@ import java.util.List;
 /**
  * 集成通讯录列表
  * <p/>
- * Created by huangjun on 2015/9/7.
+ * Created on 2015/9/7.
  */
 public class ContactListFragment extends MainTabFragment {
 

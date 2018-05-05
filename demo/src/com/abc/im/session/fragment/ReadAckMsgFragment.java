@@ -27,7 +27,7 @@ import java.util.List;
 
 /**
  * 群已读人员界面
- * Created by winnie on 2018/3/15.
+ * Created on 2018/3/15.
  */
 
 public class ReadAckMsgFragment extends AckMsgTabFragment implements TAdapterDelegate {

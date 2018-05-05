@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 用户资料数据缓存，适用于用户体系使用网易云信用户资料托管
  * 注册缓存变更通知，请使用UserInfoHelper的registerObserver方法
- * Created by huangjun on 2015/8/20.
+ * Created on 2015/8/20.
  */
 public class NimUserInfoCache {
 

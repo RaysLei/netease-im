@@ -14,7 +14,7 @@ import com.netease.nim.uikit.common.ui.recyclerview.holder.BaseViewHolder;
 import java.util.List;
 
 /**
- * Created by hzchenkang on 2017/6/21.
+ * Created on 2017/6/21.
  */
 
 public class AitContactAdapter extends BaseMultiItemQuickAdapter<AitContactItem, BaseViewHolder> {

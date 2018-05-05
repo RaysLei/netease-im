@@ -11,7 +11,7 @@ import org.json.XML;
 /**
  * 根元素，解析器入口
  * <p>
- * Created by huangjun on 2017/6/22.
+ * Created on 2017/6/22.
  */
 
 public class TemplateRoot extends ElementGroup<LinearLayout> {

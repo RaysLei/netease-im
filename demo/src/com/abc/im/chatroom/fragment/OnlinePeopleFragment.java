@@ -46,7 +46,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 聊天室在线人数fragment
  * <p>
- * Created by huangjun on 2016/12/29.
+ * Created on 2016/12/29.
  */
 public class OnlinePeopleFragment extends TFragment {
     private static final String TAG = OnlinePeopleFragment.class.getSimpleName();

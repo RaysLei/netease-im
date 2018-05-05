@@ -15,7 +15,7 @@ import com.netease.nimlib.sdk.team.model.Team;
 
 /**
  * 已读回执action
- * Created by winnie on 2018/3/14.
+ * Created on 2018/3/14.
  */
 
 public class AckMessageAction extends BaseAction {

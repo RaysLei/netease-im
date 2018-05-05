@@ -30,7 +30,7 @@ import java.util.concurrent.CountDownLatch;
  * 4. 给视频帧添加人脸识别/道具/美颜效果: faceU.effect()， 支持I420和NV21两种帧图像格式
  * 5. 显示和隐藏UI布局切换：faceU.showOrHideLayout()，默认显示
  * <p>
- * Created by huangjun on 2017/7/13.
+ * Created on 2017/7/13.
  */
 
 public class FaceU {

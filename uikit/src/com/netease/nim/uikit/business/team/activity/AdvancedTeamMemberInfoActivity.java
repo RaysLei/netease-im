@@ -37,7 +37,7 @@ import java.util.Map;
 
 /**
  * 群成员详细信息界面
- * Created by hzxuwen on 2015/3/19.
+ * Created on 2015/3/19.
  */
 public class AdvancedTeamMemberInfoActivity extends UI implements View.OnClickListener {
 

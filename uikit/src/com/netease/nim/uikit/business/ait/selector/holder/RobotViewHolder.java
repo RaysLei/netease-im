@@ -11,7 +11,7 @@ import com.netease.nim.uikit.common.ui.recyclerview.holder.RecyclerViewHolder;
 import com.netease.nimlib.sdk.robot.model.NimRobotInfo;
 
 /**
- * Created by hzchenkang on 2017/6/21.
+ * Created on 2017/6/21.
  */
 
 public class RobotViewHolder extends RecyclerViewHolder<BaseQuickAdapter, BaseViewHolder, AitContactItem<NimRobotInfo>> {

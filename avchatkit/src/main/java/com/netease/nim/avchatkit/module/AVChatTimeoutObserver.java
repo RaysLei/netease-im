@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * 音视频通话时超时监听处理
- * Created by weilv on 17/9/11.
+ * Created on 17/9/11.
  */
 
 public class AVChatTimeoutObserver {

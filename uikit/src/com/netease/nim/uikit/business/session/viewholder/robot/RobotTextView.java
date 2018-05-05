@@ -9,7 +9,7 @@ import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.business.robot.parser.elements.element.TextElement;
 
 /**
- * Created by hzchenkang on 2017/6/26.
+ * Created on 2017/6/26.
  */
 
 public class RobotTextView extends RobotViewBase<TextElement> {

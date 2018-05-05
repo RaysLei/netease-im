@@ -2,7 +2,7 @@ package com.netease.nim.uikit.business.contact.core.item;
 
 /**
  * 通讯录数据项抽象类
- * Created by huangjun on 2015/2/10.
+ * Created on 2015/2/10.
  */
 public abstract class AbsContactItem {
     /**

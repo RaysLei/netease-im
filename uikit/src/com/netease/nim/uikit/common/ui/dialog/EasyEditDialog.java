@@ -21,7 +21,7 @@ import com.netease.nim.uikit.common.util.sys.ScreenUtil;
 /**
  * 简单的带有输入框的对话框
  * <p>
- * Created by huangjun on 2015/5/28.股灾
+ * Created on 2015/5/28.股灾
  */
 public class EasyEditDialog extends Dialog {
 

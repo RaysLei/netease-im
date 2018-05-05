@@ -4,7 +4,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 
 /**
  * 消息撤回过滤器
- * Created by hzxuwen on 2016/8/22.
+ * Created on 2016/8/22.
  */
 public interface MsgRevokeFilter {
     /**

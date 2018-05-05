@@ -24,7 +24,7 @@ import com.netease.nimlib.sdk.chatroom.ChatRoomService;
 
 /**
  * 聊天室顶层fragment
- * Created by hzxuwen on 2015/12/14.
+ * Created on 2015/12/14.
  */
 public class ChatRoomFragment extends ChatRoomTabFragment implements ViewPager.OnPageChangeListener {
     private PagerSlidingTabStrip tabs;

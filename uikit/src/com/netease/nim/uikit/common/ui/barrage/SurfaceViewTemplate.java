@@ -11,7 +11,7 @@ import android.view.SurfaceView;
 
 /**
  * SurfaceView 任务队列驱动/间隔绘制模板
- * Created by huangjun on 2016/5/8.
+ * Created on 2016/5/8.
  */
 public abstract class SurfaceViewTemplate extends SurfaceView implements SurfaceHolder.Callback, Runnable {
 

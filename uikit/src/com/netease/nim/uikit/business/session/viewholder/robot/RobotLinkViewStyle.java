@@ -1,7 +1,7 @@
 package com.netease.nim.uikit.business.session.viewholder.robot;
 
 /**
- * Created by hzchenkang on 2017/9/4.
+ * Created on 2017/9/4.
  */
 
 public class RobotLinkViewStyle {

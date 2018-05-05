@@ -7,7 +7,7 @@ import com.netease.nimlib.sdk.msg.MessageBuilder;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
 
 /**
- * Created by hzxuwen on 2015/6/12.
+ * Created on 2015/6/12.
  */
 public class LocationAction extends BaseAction {
     private final static String TAG = "LocationAction";

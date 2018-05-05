@@ -22,7 +22,7 @@ import com.netease.nimlib.sdk.team.model.Team;
 
 /**
  * 申请加入群组界面
- * Created by hzxuwen on 2015/3/20.
+ * Created on 2015/3/20.
  */
 public class AdvancedTeamJoinActivity extends UI implements View.OnClickListener {
 

@@ -10,7 +10,7 @@ import com.netease.nim.uikit.common.ui.imageview.HeadImageView;
 import com.netease.nimlib.sdk.team.model.TeamMember;
 
 /**
- * Created by hzchenkang on 2016/12/2.
+ * Created on 2016/12/2.
  */
 
 public class TeamMemberListHolder extends RecyclerView.ViewHolder {

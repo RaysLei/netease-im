@@ -10,7 +10,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 import java.io.File;
 
 /**
- * Created by zhoujianghua on 2015/7/31.
+ * Created on 2015/7/31.
  */
 public class SnapChatAction extends PickImageAction {
 

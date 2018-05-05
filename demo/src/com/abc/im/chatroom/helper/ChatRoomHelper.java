@@ -14,7 +14,7 @@ import java.util.Map;
 import jp.wasabeef.glide.transformations.BlurTransformation;
 
 /**
- * Created by hzxuwen on 2016/1/19.
+ * Created on 2016/1/19.
  */
 public class ChatRoomHelper {
     private static final int[] imageRes = {R.drawable.room_cover_36, R.drawable.room_cover_37, R.drawable.room_cover_49,

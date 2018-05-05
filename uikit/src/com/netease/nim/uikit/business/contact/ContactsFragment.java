@@ -47,7 +47,7 @@ import me.everything.android.ui.overscroll.OverScrollDecoratorHelper;
 /**
  * 通讯录Fragment
  * <p/>
- * Created by huangjun on 2015/9/7.
+ * Created on 2015/9/7.
  */
 public class ContactsFragment extends TFragment {
 

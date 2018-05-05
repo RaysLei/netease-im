@@ -9,7 +9,7 @@ import com.netease.nim.uikit.api.model.contact.ContactEventListener;
 /**
  * UIKit联系人列表定制展示类
  * <p/>
- * Created by huangjun on 2015/9/11.
+ * Created on 2015/9/11.
  */
 public class ContactHelper {
 

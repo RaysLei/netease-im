@@ -5,7 +5,7 @@ import android.util.Log;
 import java.io.Serializable;
 
 /**
- * Created by huangjun on 2015/6/24.
+ * Created on 2015/6/24.
  */
 public class Transaction implements Serializable {
     public interface ActionStep {

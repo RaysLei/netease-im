@@ -23,7 +23,7 @@ import com.netease.nim.uikit.common.util.string.StringUtil;
 import java.io.File;
 
 /**
- * Created by hzxuwen on 2015/4/10.
+ * Created on 2015/4/10.
  */
 public class VideoMessageHelper {
     private File videoFile;

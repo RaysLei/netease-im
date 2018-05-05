@@ -13,7 +13,7 @@ import com.netease.nimlib.sdk.rts.model.RTSData;
 
 /**
  * 云信音白板组件定制化入口
- * Created by winnie on 2018/3/21.
+ * Created on 2018/3/21.
  */
 
 public class RTSKit {

@@ -27,7 +27,7 @@ import java.util.List;
 
 /**
  * 群未读人员界面
- * Created by winnie on 2018/3/19.
+ * Created on 2018/3/19.
  */
 
 public class UnreadAckMsgFragment extends TFragment implements TAdapterDelegate {

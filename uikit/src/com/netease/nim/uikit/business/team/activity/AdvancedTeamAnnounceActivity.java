@@ -34,7 +34,7 @@ import java.util.List;
 
 /**
  * 群公告列表
- * Created by hzxuwen on 2015/3/18.
+ * Created on 2015/3/18.
  */
 public class AdvancedTeamAnnounceActivity extends UI implements TAdapterDelegate {
     // constant

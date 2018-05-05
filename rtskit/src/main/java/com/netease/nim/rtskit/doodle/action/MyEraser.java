@@ -7,7 +7,7 @@ import android.graphics.Path;
 /**
  * 橡皮擦（与画布背景色相同的Path）
  * <p/>
- * Created by Administrator on 2015/6/24.
+ * Created on 2015/6/24.
  */
 public class MyEraser extends Action {
     private Path path;

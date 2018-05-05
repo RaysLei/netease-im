@@ -51,7 +51,7 @@ import java.util.Map;
 
 /**
  * 用户资料页面
- * Created by huangjun on 2015/8/11.
+ * Created on 2015/8/11.
  */
 public class UserProfileActivity extends UI {
 

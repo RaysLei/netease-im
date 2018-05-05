@@ -1,7 +1,7 @@
 package com.netease.nim.rtskit.common.log;
 
 /**
- * Created by winnie on 2017/12/21.
+ * Created on 2017/12/21.
  */
 
 public interface ILogUtil {

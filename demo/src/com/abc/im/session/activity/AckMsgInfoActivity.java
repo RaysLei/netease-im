@@ -24,7 +24,7 @@ import com.netease.nimlib.sdk.msg.model.TeamMsgAckInfo;
 
 /**
  * 消息已读详情界面
- * Created by winnie on 2018/3/14.
+ * Created on 2018/3/14.
  */
 
 public class AckMsgInfoActivity extends UI implements ViewPager.OnPageChangeListener {

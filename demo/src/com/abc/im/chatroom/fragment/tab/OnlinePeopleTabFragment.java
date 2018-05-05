@@ -5,7 +5,7 @@ import com.abc.im.chatroom.fragment.OnlinePeopleFragment;
 
 /**
  * 在线成员基类fragment
- * Created by hzxuwen on 2015/12/14.
+ * Created on 2015/12/14.
  */
 public class OnlinePeopleTabFragment extends ChatRoomTabFragment {
     private OnlinePeopleFragment fragment;

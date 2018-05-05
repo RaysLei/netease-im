@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * 通讯录列表数据(分组、索引)
- * Created by huangjun on 2015/2/10.
+ * Created on 2015/2/10.
  */
 public class ContactDataList extends AbsContactDataList {
     //

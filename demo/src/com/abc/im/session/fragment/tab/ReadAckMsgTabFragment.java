@@ -7,7 +7,7 @@ import com.abc.im.session.fragment.ReadAckMsgFragment;
 import com.abc.im.session.model.AckMsgTab;
 
 /**
- * Created by winnie on 2018/3/15.
+ * Created on 2018/3/15.
  */
 
 public class ReadAckMsgTabFragment extends AckMsgTabFragment  {

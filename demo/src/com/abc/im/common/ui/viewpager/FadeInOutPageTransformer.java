@@ -12,7 +12,7 @@ import android.view.View;
  * [0,1]从完全可见到不可见
  * [1,∞]完全不可见
  * <p/>
- * Created by doc on 15/1/6.
+ * Created on 15/1/6.
  */
 public class FadeInOutPageTransformer implements ViewPager.PageTransformer {
 

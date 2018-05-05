@@ -11,7 +11,7 @@ import com.netease.nim.uikit.common.util.storage.StorageUtil;
 import com.netease.nim.uikit.common.util.string.StringUtil;
 
 /**
- * Created by huangjun on 2015/9/22.
+ * Created on 2015/9/22.
  */
 public class PickImageHelper {
 

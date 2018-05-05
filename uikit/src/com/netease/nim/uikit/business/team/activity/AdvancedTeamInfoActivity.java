@@ -65,7 +65,7 @@ import java.util.List;
 
 /**
  * 高级群群资料页
- * Created by huangjun on 2015/3/17.
+ * Created on 2015/3/17.
  */
 public class AdvancedTeamInfoActivity extends UI implements
         TAdapterDelegate, TeamMemberAdapter.AddMemberCallback, TeamMemberHolder.TeamMemberHolderEventListener {

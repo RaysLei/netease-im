@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import com.netease.nim.uikit.business.robot.parser.elements.base.Element;
 
 /**
- * Created by hzchenkang on 2017/6/26.
+ * Created on 2017/6/26.
  */
 
 public abstract class RobotViewBase<T extends Element> extends FrameLayout {

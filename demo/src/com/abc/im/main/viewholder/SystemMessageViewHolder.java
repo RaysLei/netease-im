@@ -14,7 +14,7 @@ import com.netease.nimlib.sdk.msg.constant.SystemMessageStatus;
 import com.netease.nimlib.sdk.msg.model.SystemMessage;
 
 /**
- * Created by huangjun on 2015/3/18.
+ * Created on 2015/3/18.
  */
 public class SystemMessageViewHolder extends TViewHolder {
 

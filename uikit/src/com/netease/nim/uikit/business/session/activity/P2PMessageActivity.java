@@ -33,7 +33,7 @@ import java.util.Set;
 /**
  * 点对点聊天界面
  * <p/>
- * Created by huangjun on 2015/2/1.
+ * Created on 2015/2/1.
  */
 public class P2PMessageActivity extends BaseMessageActivity {
 

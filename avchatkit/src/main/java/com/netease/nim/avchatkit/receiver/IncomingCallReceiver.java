@@ -8,7 +8,7 @@ import android.telephony.TelephonyManager;
 /**
  * 来电状态监听
  * <p/>
- * Created by huangjun on 2015/5/13.
+ * Created on 2015/5/13.
  */
 public class IncomingCallReceiver extends BroadcastReceiver {
 

@@ -1,7 +1,7 @@
 package com.netease.nim.uikit.api.model.main;
 
 /**
- * Created by hzchenkang on 2017/3/31.
+ * Created on 2017/3/31.
  */
 
 public interface OnlineStateContentProvider {

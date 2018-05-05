@@ -1,7 +1,7 @@
 package com.netease.nim.avchatkit.teamavchat.module;
 
 /**
- * Created by huangjun on 2017/5/4.
+ * Created on 2017/5/4.
  */
 
 public class TeamAVChatItem {

@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SimpleItemAnimator;
 
 /**
- * Created by hzxuwen on 2017/1/13.
+ * Created on 2017/1/13.
  */
 
 public class RecyclerViewUtil {

@@ -8,7 +8,7 @@ import com.netease.nim.uikit.common.adapter.TAdapterDelegate;
 import java.util.List;
 
 /**
- * Created by hzxuwen on 2015/4/17.
+ * Created on 2015/4/17.
  */
 public class FileBrowserAdapter extends TAdapter {
 

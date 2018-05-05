@@ -7,7 +7,7 @@ import com.netease.nim.uikit.common.util.media.BitmapDecoder;
 import com.netease.nimlib.sdk.msg.attachment.VideoAttachment;
 
 /**
- * Created by zhoujianghua on 2015/8/5.
+ * Created on 2015/8/5.
  */
 public class MsgViewHolderVideo extends MsgViewHolderThumbBase {
 

@@ -11,7 +11,7 @@ import java.util.Locale;
 /**
  * 日志格式
  * <p>
- * Created by huangjun on 2017/3/8.
+ * Created on 2017/3/8.
  */
 class LogFormat {
 

@@ -1,7 +1,7 @@
 package com.netease.nim.uikit.business.team.model;
 
 /**
- * Created by hzxuwen on 2015/9/22.
+ * Created on 2015/9/22.
  */
 public interface TeamExtras {
     String RESULT_EXTRA_REASON = "RESULT_EXTRA_REASON";

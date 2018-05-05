@@ -13,7 +13,7 @@ import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 import com.netease.nimlib.sdk.uinfo.model.UserInfo;
 
 /**
- * Created by huangjun on 2015/9/22.
+ * Created on 2015/9/22.
  */
 public class BlackListViewHolder extends TViewHolder {
     private HeadImageView headImageView;

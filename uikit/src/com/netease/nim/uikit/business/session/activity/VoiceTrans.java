@@ -19,7 +19,7 @@ import com.netease.nimlib.sdk.msg.attachment.AudioAttachment;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
 
 /**
- * Created by hzxuwen on 2015/7/9.
+ * Created on 2015/7/9.
  */
 public class VoiceTrans {
     private static final String TAG = VoiceTrans.class.getSimpleName();

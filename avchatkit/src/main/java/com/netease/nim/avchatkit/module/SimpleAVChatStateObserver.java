@@ -9,7 +9,7 @@ import com.netease.nimlib.sdk.avchat.model.AVChatVideoFrame;
 import java.util.Map;
 
 /**
- * Created by winnie on 2017/12/8.
+ * Created on 2017/12/8.
  */
 
 public class SimpleAVChatStateObserver implements AVChatStateObserver {

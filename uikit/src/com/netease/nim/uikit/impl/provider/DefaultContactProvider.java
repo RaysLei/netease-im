@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * UIKit默认的通讯录（联系人）数据源提供者，
- * Created by hzchenkang on 2016/12/19.
+ * Created on 2016/12/19.
  */
 
 public class DefaultContactProvider implements ContactProvider {

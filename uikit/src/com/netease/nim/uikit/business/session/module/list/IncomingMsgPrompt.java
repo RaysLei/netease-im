@@ -18,7 +18,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 
 /**
  * 新消息提醒模块
- * Created by hzxuwen on 2015/6/17.
+ * Created on 2015/6/17.
  */
 public class IncomingMsgPrompt {
     // 底部新消息提示条

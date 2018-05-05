@@ -8,7 +8,7 @@ import com.netease.nimlib.sdk.search.model.MsgIndexRecord;
 import com.netease.nimlib.sdk.uinfo.model.UserInfo;
 
 /**
- * Created by huangjun on 2015/9/8.
+ * Created on 2015/9/8.
  */
 public class ContactHelper {
     public static IContact makeContactFromUserInfo(final UserInfo userInfo) {

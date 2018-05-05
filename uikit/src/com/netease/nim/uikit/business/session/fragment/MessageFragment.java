@@ -49,7 +49,7 @@ import java.util.Map;
 /**
  * 聊天界面基类
  * <p/>
- * Created by huangjun on 2015/2/1.
+ * Created on 2015/2/1.
  */
 public class MessageFragment extends TFragment implements ModuleProxy {
 

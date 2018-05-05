@@ -3,7 +3,7 @@ package com.netease.nim.uikit.common.ui.barrage;
 import android.text.TextPaint;
 
 /**
- * Created by huangjun on 2016/5/8.
+ * Created on 2016/5/8.
  */
 class BarrageTextTask {
     // build

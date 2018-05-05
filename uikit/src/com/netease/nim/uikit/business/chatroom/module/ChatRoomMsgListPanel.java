@@ -51,7 +51,7 @@ import java.util.List;
 
 /**
  * 聊天室消息收发模块
- * Created by huangjun on 2016/1/27.
+ * Created on 2016/1/27.
  */
 public class ChatRoomMsgListPanel {
     private static final int MESSAGE_CAPACITY = 500;

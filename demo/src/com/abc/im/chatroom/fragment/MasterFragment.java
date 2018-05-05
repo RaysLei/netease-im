@@ -23,7 +23,7 @@ import com.netease.nimlib.sdk.chatroom.model.ChatRoomMember;
 
 /**
  * 聊天室主播fragment
- * Created by hzxuwen on 2015/12/17.
+ * Created on 2015/12/17.
  */
 public class MasterFragment extends TFragment {
     private static final String TAG = MasterFragment.class.getSimpleName();

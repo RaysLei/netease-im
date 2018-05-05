@@ -23,7 +23,7 @@ import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 
 /**
  * 添加好友页面
- * Created by huangjun on 2015/8/11.
+ * Created on 2015/8/11.
  */
 public class AddFriendActivity extends UI {
 

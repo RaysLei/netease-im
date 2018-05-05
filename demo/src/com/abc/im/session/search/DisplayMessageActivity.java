@@ -20,7 +20,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 /**
  * 搜索结果消息列表界面
  * <p>
- * Created by huangjun on 2017/1/11.
+ * Created on 2017/1/11.
  */
 public class DisplayMessageActivity extends UI implements ModuleProxy {
 

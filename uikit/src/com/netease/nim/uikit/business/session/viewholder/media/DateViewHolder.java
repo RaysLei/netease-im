@@ -7,7 +7,7 @@ import android.widget.TextView;
 import com.netease.nim.uikit.R;
 
 /**
- * Created by winnie on 2017/9/18.
+ * Created on 2017/9/18.
  */
 
 public class DateViewHolder extends RecyclerView.ViewHolder {

@@ -3,7 +3,7 @@ package com.abc.im.chatroom.fragment.tab;
 import com.abc.im.R;
 
 /**
- * Created by hzxuwen on 2015/12/14.
+ * Created on 2015/12/14.
  */
 public enum ChatRoomTab {
     CHAT_ROOM_MESSAGE(0, MessageTabFragment.class, R.string.chat_room_message, R.layout.chat_room_message_tab),

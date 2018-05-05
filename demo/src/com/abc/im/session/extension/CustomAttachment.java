@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.netease.nimlib.sdk.msg.attachment.MsgAttachment;
 
 /**
- * Created by zhoujianghua on 2015/4/9.
+ * Created on 2015/4/9.
  */
 public abstract class CustomAttachment implements MsgAttachment {
 

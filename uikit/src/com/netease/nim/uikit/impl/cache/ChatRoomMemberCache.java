@@ -28,7 +28,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 聊天室成员资料缓存
- * Created by huangjun on 2016/1/18.
+ * Created on 2016/1/18.
  */
 public class ChatRoomMemberCache {
 

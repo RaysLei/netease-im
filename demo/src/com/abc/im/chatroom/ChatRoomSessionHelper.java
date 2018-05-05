@@ -12,7 +12,7 @@ import java.util.ArrayList;
 /**
  * UIKit自定义聊天室消息界面用法展示类
  * <p>
- * Created by huangjun on 2017/9/18.
+ * Created on 2017/9/18.
  */
 
 public class ChatRoomSessionHelper {

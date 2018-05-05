@@ -12,7 +12,7 @@ import com.netease.nim.uikit.common.ui.recyclerview.adapter.BaseMultiItemFetchLo
 import com.netease.nim.uikit.common.util.sys.ScreenUtil;
 
 /**
- * Created by hzxuwen on 2016/1/18.
+ * Created on 2016/1/18.
  */
 public class ChatRoomMsgViewHolderText extends ChatRoomMsgViewHolderBase {
 

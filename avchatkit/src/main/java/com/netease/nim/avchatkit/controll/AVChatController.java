@@ -33,7 +33,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * 音视频控制器：用于实现音视频拨打接听，音视频切换的具体功能实现
- * Created by winnie on 2017/12/10.
+ * Created on 2017/12/10.
  */
 
 public class AVChatController {

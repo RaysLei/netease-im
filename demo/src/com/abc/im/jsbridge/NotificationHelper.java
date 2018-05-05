@@ -11,7 +11,7 @@ import com.abc.im.R;
 import com.abc.im.main.activity.MainActivity;
 
 /**
- * Created by hzliuxuanlin on 16/10/22.
+ * Created on 16/10/22.
  */
 public class NotificationHelper {
     private Context context;

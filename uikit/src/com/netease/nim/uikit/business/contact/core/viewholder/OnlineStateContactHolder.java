@@ -9,7 +9,7 @@ import com.netease.nim.uikit.business.contact.core.model.IContact;
 import com.netease.nim.uikit.impl.NimUIKitImpl;
 
 /**
- * Created by hzchenkang on 2017/4/6.
+ * Created on 2017/4/6.
  */
 
 public class OnlineStateContactHolder extends ContactHolder {

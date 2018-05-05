@@ -3,7 +3,7 @@ package com.faceunity.utils;
 import android.os.Build;
 
 /**
- * Created by huangjun on 2017/7/13.
+ * Created on 2017/7/13.
  */
 public class VersionUtil {
 

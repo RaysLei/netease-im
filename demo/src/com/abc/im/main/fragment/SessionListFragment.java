@@ -39,7 +39,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by zhoujianghua on 2015/8/17.
+ * Created on 2015/8/17.
  */
 public class SessionListFragment extends MainTabFragment {
 

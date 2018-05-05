@@ -8,7 +8,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
 /**
- * Created by huangjun on 2016/12/9.
+ * Created on 2016/12/9.
  */
 public class SpacingDecoration extends RecyclerView.ItemDecoration {
     private int mHorizontalSpacing = 0;

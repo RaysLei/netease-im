@@ -8,7 +8,7 @@ import com.netease.nimlib.sdk.robot.model.NimRobotInfo;
 import java.util.List;
 
 /**
- * Created by hzchenkang on 2017/11/2.
+ * Created on 2017/11/2.
  */
 
 public class DefaultRobotProvider implements RobotInfoProvider {

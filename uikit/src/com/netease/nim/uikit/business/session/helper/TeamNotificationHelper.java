@@ -22,7 +22,7 @@ import java.util.Map;
 
 /**
  * 系统消息描述文本构造器。主要是将各个系统消息转换为显示的文本内容。<br>
- * Created by huangjun on 2015/3/11.
+ * Created on 2015/3/11.
  */
 public class TeamNotificationHelper {
     private static ThreadLocal<String> teamId = new ThreadLocal<>();

@@ -11,7 +11,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 import java.util.List;
 
 /**
- * Created by huangjun on 2017/9/18.
+ * Created on 2017/9/18.
  */
 public class ChatRoomInputPanel extends InputPanel {
 

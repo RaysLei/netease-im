@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by huangjun on 2015/3/21.
+ * Created on 2015/3/21.
  */
 public class MenuDialog extends Dialog implements View.OnClickListener {
     public interface MenuDialogOnButtonClickListener {

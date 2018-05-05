@@ -6,7 +6,7 @@ import com.netease.nimlib.sdk.uinfo.model.UserInfo;
 import java.util.List;
 
 /**
- * Created by hzchenkang on 2017/10/24.
+ * Created on 2017/10/24.
  */
 
 public interface IUserInfoProvider<T extends UserInfo> {

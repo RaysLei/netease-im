@@ -20,7 +20,7 @@ import java.util.List;
 
 
 /**
- * Created by hzchenkang on 2017/5/5.
+ * Created on 2017/5/5.
  */
 
 public class TeamAVChatProfile {

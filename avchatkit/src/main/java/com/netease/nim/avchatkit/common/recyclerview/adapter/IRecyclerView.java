@@ -1,7 +1,7 @@
 package com.netease.nim.avchatkit.common.recyclerview.adapter;
 
 /**
- * Created by huangjun on 2016/12/8.
+ * Created on 2016/12/8.
  */
 
 public interface IRecyclerView {

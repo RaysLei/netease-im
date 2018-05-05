@@ -39,7 +39,7 @@ import java.util.List;
 
 /**
  * 视频界面变化及点击事件
- * Created by winnie on 2017/12/11.
+ * Created on 2017/12/11.
  */
 
 public class AVChatVideoUI implements View.OnClickListener, ToggleListener {

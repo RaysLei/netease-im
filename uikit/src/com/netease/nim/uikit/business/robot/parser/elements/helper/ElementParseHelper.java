@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * 元素解析器辅助类
  * <p>
- * Created by huangjun on 2017/6/23.
+ * Created on 2017/6/23.
  */
 
 public class ElementParseHelper {

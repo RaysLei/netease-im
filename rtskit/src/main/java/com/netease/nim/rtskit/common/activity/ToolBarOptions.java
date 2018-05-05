@@ -1,7 +1,7 @@
 package com.netease.nim.rtskit.common.activity;
 
 /**
- * Created by hzxuwen on 2016/6/16.
+ * Created on 2016/6/16.
  */
 public class ToolBarOptions {
     /**

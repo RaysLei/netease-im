@@ -43,7 +43,7 @@ import java.util.List;
 /**
  * 自定义通知
  * <p/>
- * Created by huangjun on 2015/5/28
+ * Created on 2015/5/28
  */
 public class CustomNotificationActivity extends UI implements TAdapterDelegate {
 

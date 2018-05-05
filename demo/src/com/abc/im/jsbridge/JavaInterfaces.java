@@ -9,7 +9,7 @@ import com.netease.nimlib.jsbridge.annotation.ParamCallback;
 import com.netease.nimlib.jsbridge.interfaces.IJavaReplyToJsImageInfo;
 
 /**
- * Created by hzliuxuanlin on 16/10/21.
+ * Created on 16/10/21.
  */
 public class JavaInterfaces {
 

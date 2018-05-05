@@ -20,7 +20,7 @@ import com.netease.nim.uikit.common.util.sys.ScreenUtil;
 import java.util.List;
 
 /**
- * Created by zhoujianghua on 2015/9/10.
+ * Created on 2015/9/10.
  */
 public abstract class BaseMessageActivity extends UI {
 

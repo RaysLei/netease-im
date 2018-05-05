@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by huangjun on 2017/9/18.
+ * Created on 2017/9/18.
  */
 public class ChatRoomHelper {
     public static void buildMemberTypeInRemoteExt(ChatRoomMessage message, String roomId) {

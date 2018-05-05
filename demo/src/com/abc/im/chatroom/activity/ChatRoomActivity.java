@@ -29,7 +29,7 @@ import com.netease.nimlib.sdk.chatroom.model.EnterChatRoomResultData;
 
 /**
  * 聊天室
- * Created by hzxuwen on 2015/12/14.
+ * Created on 2015/12/14.
  */
 public class ChatRoomActivity extends UI {
     private final static String EXTRA_ROOM_ID = "ROOM_ID";

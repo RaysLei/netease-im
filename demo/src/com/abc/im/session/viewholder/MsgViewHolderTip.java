@@ -12,7 +12,7 @@ import com.netease.nim.uikit.common.ui.recyclerview.adapter.BaseMultiItemFetchLo
 import java.util.Map;
 
 /**
- * Created by huangjun on 2015/11/25.
+ * Created on 2015/11/25.
  * Tip类型消息ViewHolder
  */
 public class MsgViewHolderTip extends MsgViewHolderBase {

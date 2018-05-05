@@ -4,7 +4,7 @@ import com.netease.nim.uikit.R;
 import com.netease.nimlib.sdk.media.record.RecordType;
 
 /**
- * Created by hzchenkang on 2017/10/19.
+ * Created on 2017/10/19.
  */
 
 public class UIKitOptions {

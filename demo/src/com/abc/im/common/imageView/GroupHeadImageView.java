@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * 群组头像合成控件
  * <p/>
- * Created by huangjun on 2015/6/17.
+ * Created on 2015/6/17.
  */
 public class GroupHeadImageView extends ImageView {
 

@@ -14,7 +14,7 @@ import com.netease.nim.uikit.common.util.sys.ScreenUtil;
 import com.netease.nim.uikit.impl.NimUIKitImpl;
 
 /**
- * Created by zhoujianghua on 2015/8/4.
+ * Created on 2015/8/4.
  */
 public class MsgViewHolderText extends MsgViewHolderBase {
 

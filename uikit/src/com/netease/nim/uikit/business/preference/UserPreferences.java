@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 import com.netease.nim.uikit.api.NimUIKit;
 
 /**
- * Created by hzxuwen on 2015/10/21.
+ * Created on 2015/10/21.
  */
 public class UserPreferences {
 

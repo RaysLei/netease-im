@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * 直播间列表fragment
  * <p>
- * Created by huangjun on 2015/12/11.
+ * Created on 2015/12/11.
  */
 public class ChatRoomListFragment extends TFragment {
     private static final String TAG = ChatRoomListFragment.class.getSimpleName();

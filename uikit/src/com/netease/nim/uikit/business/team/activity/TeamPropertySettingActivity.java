@@ -26,7 +26,7 @@ import com.netease.nimlib.sdk.team.constant.TeamFieldEnum;
 
 /**
  * 群属性
- * Created by hzxuwen on 2015/4/10.
+ * Created on 2015/4/10.
  */
 public class TeamPropertySettingActivity extends UI implements View.OnClickListener {
 

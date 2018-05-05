@@ -3,7 +3,7 @@ package com.netease.nim.uikit.api.model.main;
 import java.util.Set;
 
 /**
- * Created by hzchenkang on 2017/4/5.
+ * Created on 2017/4/5.
  */
 
 public interface OnlineStateChangeObserver {

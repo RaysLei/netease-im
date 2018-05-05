@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * 涂鸦板控件（基类）
  * <p/>
- * Created by huangjun on 2015/6/24.
+ * Created on 2015/6/24.
  */
 public class DoodleView extends SurfaceView implements SurfaceHolder.Callback, TransactionObserver {
 

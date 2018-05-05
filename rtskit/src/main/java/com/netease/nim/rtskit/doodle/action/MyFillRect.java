@@ -6,7 +6,7 @@ import android.graphics.Paint;
 /**
  * 实心方块
  * <p/>
- * Created by huangjun on 2015/6/24.
+ * Created on 2015/6/24.
  */
 public class MyFillRect extends Action {
     public MyFillRect(Float x, Float y, Integer color, Integer size) {

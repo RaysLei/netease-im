@@ -8,7 +8,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by huangjun on 2017/6/22.
+ * Created on 2017/6/22.
  * <p>
  * <image name="属性名" url="属性值" width="图片宽度" height="图片高度"/>
  */

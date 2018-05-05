@@ -9,7 +9,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 import java.io.File;
 
 /**
- * Created by hzxuwen on 2015/6/12.
+ * Created on 2015/6/12.
  */
 public class ImageAction extends PickImageAction {
 

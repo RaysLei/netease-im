@@ -8,7 +8,7 @@ import com.netease.nim.uikit.business.session.actions.BaseAction;
 import com.netease.nim.uikit.common.util.sys.NetworkUtil;
 
 /**
- * Created by huangjun on 2015/7/7.
+ * Created on 2015/7/7.
  */
 public class RTSAction extends BaseAction {
 

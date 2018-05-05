@@ -30,7 +30,7 @@ import com.netease.nimlib.sdk.search.model.MsgIndexRecord;
 
 /**
  * 消息全文检索详细页面
- * Created by huangjun on 2016/6/28.
+ * Created on 2016/6/28.
  */
 public class GlobalSearchDetailActivity extends UI implements OnItemClickListener {
 

@@ -30,7 +30,7 @@ import com.netease.nimlib.sdk.team.model.CreateTeamResult;
 import java.util.ArrayList;
 
 /**
- * Created by hzxuwen on 2015/10/13.
+ * Created on 2015/10/13.
  */
 public class MessageInfoActivity extends UI {
     private final static String EXTRA_ACCOUNT = "EXTRA_ACCOUNT";

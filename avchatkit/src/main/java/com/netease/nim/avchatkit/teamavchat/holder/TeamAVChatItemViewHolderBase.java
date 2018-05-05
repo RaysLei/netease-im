@@ -7,7 +7,7 @@ import com.netease.nim.avchatkit.common.recyclerview.holder.RecyclerViewHolder;
 import com.netease.nim.avchatkit.teamavchat.module.TeamAVChatItem;
 
 /**
- * Created by huangjun on 2017/5/9.
+ * Created on 2017/5/9.
  */
 
 abstract class TeamAVChatItemViewHolderBase extends RecyclerViewHolder<BaseMultiItemFetchLoadAdapter, BaseViewHolder, TeamAVChatItem> {

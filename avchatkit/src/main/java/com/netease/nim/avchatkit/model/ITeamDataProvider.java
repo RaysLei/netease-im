@@ -2,7 +2,7 @@ package com.netease.nim.avchatkit.model;
 
 /**
  * 群组相关数据提供者
- * Created by winnie on 2017/12/25.
+ * Created on 2017/12/25.
  */
 
 public abstract class ITeamDataProvider {

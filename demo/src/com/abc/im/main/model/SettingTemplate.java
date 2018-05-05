@@ -1,7 +1,7 @@
 package com.abc.im.main.model;
 
 /**
- * Created by hzxuwen on 2015/6/29.
+ * Created on 2015/6/29.
  */
 public class SettingTemplate {
     private int id;

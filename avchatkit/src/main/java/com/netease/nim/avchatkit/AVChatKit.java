@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 /**
  * 云信音视频组件定制化入口
- * Created by winnie on 2017/12/6.
+ * Created on 2017/12/6.
  */
 
 public class AVChatKit {

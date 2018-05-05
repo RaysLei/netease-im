@@ -29,7 +29,7 @@ import java.util.Map;
 /**
  * 通讯录数据适配器
  * <p/>
- * Created by huangjun on 2015/2/10.
+ * Created on 2015/2/10.
  */
 public class ContactDataAdapter extends BaseAdapter {
 

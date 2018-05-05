@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 /**
  * 抽象出来的，群组更多定制化选项，普通群和高级群同样功能的抽象
- * Created by winnie on 2018/3/19.
+ * Created on 2018/3/19.
  */
 
 public class SessionTeamCustomization extends SessionCustomization{

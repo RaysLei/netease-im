@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 /**
- * Created by hzchenkang on 2016/11/10.
+ * Created on 2016/11/10.
  */
 
 public class DemoMixPushMessageHandler implements MixPushMessageHandler {

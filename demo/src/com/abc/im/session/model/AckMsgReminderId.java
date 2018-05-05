@@ -1,7 +1,7 @@
 package com.abc.im.session.model;
 
 /**
- * Created by winnie on 2018/3/14.
+ * Created on 2018/3/14.
  */
 
 public class AckMsgReminderId {

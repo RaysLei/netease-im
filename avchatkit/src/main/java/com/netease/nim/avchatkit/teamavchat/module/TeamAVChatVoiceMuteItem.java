@@ -1,7 +1,7 @@
 package com.netease.nim.avchatkit.teamavchat.module;
 
 /**
- * Created by hzchenkang on 2017/5/9.
+ * Created on 2017/5/9.
  */
 
 public class TeamAVChatVoiceMuteItem {

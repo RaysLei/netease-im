@@ -13,7 +13,7 @@ import com.netease.nimlib.sdk.avchat.model.AVChatImageFormat;
 import com.netease.nimlib.sdk.avchat.model.AVChatParameters;
 
 /**
- * Created by winnie on 2017/12/10.
+ * Created on 2017/12/10.
  */
 
 public class AVChatConfigs {

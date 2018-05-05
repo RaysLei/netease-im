@@ -19,7 +19,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 /**
  * 消息历史查询界面
  * <p/>
- * Created by huangjun on 2015/4/17.
+ * Created on 2015/4/17.
  */
 public class MessageHistoryActivity extends UI implements ModuleProxy {
 

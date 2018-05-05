@@ -57,7 +57,7 @@ import java.util.List;
 /**
  * 讨论组资料页
  * <p/>
- * Created by huangjun on 2015/3/3.
+ * Created on 2015/3/3.
  */
 public class NormalTeamInfoActivity extends UI implements OnClickListener, TAdapterDelegate,
         TeamMemberAdapter.RemoveMemberCallback, TeamMemberAdapter.AddMemberCallback, TeamMemberHolder.TeamMemberHolderEventListener {

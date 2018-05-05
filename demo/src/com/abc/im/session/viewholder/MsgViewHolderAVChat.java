@@ -12,7 +12,7 @@ import com.netease.nimlib.sdk.avchat.constant.AVChatType;
 import com.netease.nimlib.sdk.avchat.model.AVChatAttachment;
 
 /**
- * Created by zhoujianghua on 2015/8/6.
+ * Created on 2015/8/6.
  */
 public class MsgViewHolderAVChat extends MsgViewHolderBase {
 

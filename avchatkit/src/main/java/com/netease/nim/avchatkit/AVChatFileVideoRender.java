@@ -16,7 +16,7 @@ import java.nio.ByteBuffer;
 
 /**
  * 供用户参考使用
- * Created by liuqijun on 2/27/17.
+ * Created on 2/27/17.
  */
 public class AVChatFileVideoRender extends AVChatExternalVideoRender {
 

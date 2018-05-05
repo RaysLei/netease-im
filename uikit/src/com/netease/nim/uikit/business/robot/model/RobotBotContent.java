@@ -3,7 +3,7 @@ package com.netease.nim.uikit.business.robot.model;
 import java.io.Serializable;
 
 /**
- * Created by hzchenkang on 2017/6/30.
+ * Created on 2017/6/30.
  */
 
 public class RobotBotContent implements Serializable {

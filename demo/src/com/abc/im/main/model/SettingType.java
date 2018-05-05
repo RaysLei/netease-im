@@ -1,7 +1,7 @@
 package com.abc.im.main.model;
 
 /**
- * Created by hzxuwen on 2015/6/30.
+ * Created on 2015/6/30.
  */
 public interface SettingType {
     int TYPE_DEFAULE = 1;

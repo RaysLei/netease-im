@@ -9,7 +9,7 @@ import com.netease.nimlib.sdk.uinfo.model.UserInfo;
 import java.util.List;
 
 /**
- * Created by huangjun on 2015/8/12.
+ * Created on 2015/8/12.
  */
 public class BlackListAdapter extends TAdapter<UserInfo> {
 

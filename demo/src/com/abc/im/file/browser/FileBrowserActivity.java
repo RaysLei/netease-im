@@ -24,7 +24,7 @@ import java.util.List;
 
 /**
  * 文件管理器
- * Created by hzxuwen on 2015/4/17.
+ * Created on 2015/4/17.
  */
 public class FileBrowserActivity extends UI implements TAdapterDelegate {
     // constant

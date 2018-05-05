@@ -3,7 +3,7 @@ package com.netease.nim.rtskit.api.config;
 import android.content.Context;
 
 /**
- * Created by winnie on 2018/3/26.
+ * Created on 2018/3/26.
  */
 
 public class RTSOptions {

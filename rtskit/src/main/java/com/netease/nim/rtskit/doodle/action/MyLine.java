@@ -6,7 +6,7 @@ import android.graphics.Paint;
 /**
  * 直线
  * <p/>
- * Created by Administrator on 2015/6/24.
+ * Created on 2015/6/24.
  */
 public class MyLine extends Action {
     public MyLine(Float x, Float y, Integer color, Integer size) {

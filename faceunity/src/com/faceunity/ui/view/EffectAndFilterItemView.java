@@ -17,7 +17,7 @@ import com.faceunity.R;
 import com.faceunity.ui.adapter.EffectAndFilterSelectAdapter;
 
 /**
- * Created by lirui on 2017/1/20.
+ * Created on 2017/1/20.
  */
 
 public class EffectAndFilterItemView extends LinearLayout {

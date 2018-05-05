@@ -10,7 +10,7 @@ import android.os.Build;
  * 适配Android O版本的通知栏
  * 采用
  * <p>
- * Created by huangjun on 2017/11/8.
+ * Created on 2017/11/8.
  */
 
 class AVChatNotificationChannelCompat26 {

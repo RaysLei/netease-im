@@ -11,7 +11,7 @@ import com.netease.nim.uikit.common.util.sys.NetworkUtil;
 import com.netease.nimlib.sdk.avchat.constant.AVChatType;
 
 /**
- * Created by hzxuwen on 2015/6/12.
+ * Created on 2015/6/12.
  */
 public class AVChatAction extends BaseAction {
     private AVChatType avChatType;

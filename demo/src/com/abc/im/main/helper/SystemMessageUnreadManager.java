@@ -1,7 +1,7 @@
 package com.abc.im.main.helper;
 
 /**
- * Created by huangjun on 2015/8/20.
+ * Created on 2015/8/20.
  */
 public class SystemMessageUnreadManager {
 

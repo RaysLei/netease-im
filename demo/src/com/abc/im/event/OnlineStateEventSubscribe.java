@@ -21,7 +21,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Created by chenkang on 2017/4/26.
+ * Created on 2017/4/26.
  */
 
 public class OnlineStateEventSubscribe {

@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * 聊天室主TAB适配器
- * Created by hzxuwen on 2015/12/14.
+ * Created on 2015/12/14.
  */
 public class ChatRoomTabPagerAdapter extends SlidingTabPagerAdapter {
     public ChatRoomTabPagerAdapter(FragmentManager fm, Context context, ViewPager pager) {

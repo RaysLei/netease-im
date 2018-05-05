@@ -4,7 +4,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by huangjun on 2017/6/22.
+ * Created on 2017/6/22.
  * <p>
  * 元素，只有属性，不支持嵌套
  */

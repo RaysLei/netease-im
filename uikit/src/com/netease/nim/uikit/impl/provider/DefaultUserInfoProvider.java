@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by hzchenkang on 2017/10/24.
+ * Created on 2017/10/24.
  */
 
 public class DefaultUserInfoProvider implements IUserInfoProvider<NimUserInfo> {

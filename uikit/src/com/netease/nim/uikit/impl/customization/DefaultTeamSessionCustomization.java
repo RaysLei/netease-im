@@ -23,7 +23,7 @@ import java.util.ArrayList;
  * <p>
  * DefaultTeamSessionCustomization 提供默认的群聊界面定制，添加了ActionBar右侧按钮，用于跳转群信息界面
  * <p>
- * Created by hzchenkang on 2016/12/20.
+ * Created on 2016/12/20.
  */
 
 public class DefaultTeamSessionCustomization extends SessionCustomization {

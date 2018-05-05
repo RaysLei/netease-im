@@ -2,7 +2,7 @@ package com.netease.nim.rtskit.api.listener;
 
 /**
  * RTS 事件监听器
- * Created by winnie on 2018/3/26.
+ * Created on 2018/3/26.
  */
 
 public interface RTSEventListener {

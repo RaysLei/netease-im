@@ -25,7 +25,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by hzxuwen on 2015/7/8.
+ * Created on 2015/7/8.
  */
 public class MultiportActivity extends UI {
     private final static String EXTRA_DATA = "EXTRA_DATA";

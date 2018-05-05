@@ -15,7 +15,7 @@ import com.netease.nimlib.sdk.chatroom.model.ChatRoomMessage;
 
 /**
  * 聊天室成员姓名
- * Created by hzxuwen on 2016/1/20.
+ * Created on 2016/1/20.
  */
 public class ChatRoomViewHolderHelper {
 

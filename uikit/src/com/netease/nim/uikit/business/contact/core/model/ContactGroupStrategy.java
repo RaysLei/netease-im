@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * 通讯录分组策略
- * Created by huangjun on 2015/2/10.
+ * Created on 2015/2/10.
  */
 
 public class ContactGroupStrategy implements Comparator<String> {

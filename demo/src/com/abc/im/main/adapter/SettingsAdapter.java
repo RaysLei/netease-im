@@ -21,7 +21,7 @@ import com.netease.nim.uikit.common.ui.widget.SwitchButton;
 import java.util.List;
 
 /**
- * Created by hzxuwen on 2015/6/30.
+ * Created on 2015/6/30.
  */
 public class SettingsAdapter extends BaseAdapter {
     protected List<SettingTemplate> items;

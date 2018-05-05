@@ -1,7 +1,7 @@
 package com.netease.nim.avchatkit.constant;
 
 /**
- * Created by winnie on 2017/12/7.
+ * Created on 2017/12/7.
  */
 
 public class AVChatExtras {

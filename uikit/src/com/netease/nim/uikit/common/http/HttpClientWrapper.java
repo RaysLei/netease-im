@@ -13,7 +13,7 @@ import java.net.URL;
 import java.util.Map;
 
 /**
- * Created by huangjun on 2016/11/21.
+ * Created on 2016/11/21.
  */
 
 public class HttpClientWrapper {

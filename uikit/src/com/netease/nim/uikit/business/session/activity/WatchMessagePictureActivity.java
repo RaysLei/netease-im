@@ -56,7 +56,7 @@ import java.util.List;
 
 /**
  * 查看聊天消息原图
- * Created by huangjun on 2015/3/6.
+ * Created on 2015/3/6.
  */
 public class WatchMessagePictureActivity extends UI {
 

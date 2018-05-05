@@ -22,7 +22,7 @@ import java.util.Map;
 /**
  * 网易云信Demo聊天室Http客户端。第三方开发者请连接自己的应用服务器。
  * <p/>
- * Created by huangjun on 2016/1/18.
+ * Created on 2016/1/18.
  */
 public class ChatRoomHttpClient {
     private static final String TAG = ChatRoomHttpClient.class.getSimpleName();

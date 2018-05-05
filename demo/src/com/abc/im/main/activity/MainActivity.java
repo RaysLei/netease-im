@@ -46,7 +46,7 @@ import java.util.ArrayList;
 /**
  * 主界面
  * <p/>
- * Created by huangjun on 2015/3/25.
+ * Created on 2015/3/25.
  */
 public class MainActivity extends UI {
 

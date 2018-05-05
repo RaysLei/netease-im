@@ -4,7 +4,7 @@ import com.netease.nimlib.sdk.uinfo.model.UserInfo;
 
 /**
  * 用户相关资料提供者
- * Created by winnie on 2017/12/19.
+ * Created on 2017/12/19.
  */
 
 public abstract class IUserInfoProvider {

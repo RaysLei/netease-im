@@ -5,7 +5,7 @@ import com.netease.nim.avchatkit.common.log.ILogUtil;
 import com.netease.nim.uikit.common.util.log.LogUtil;
 
 /**
- * Created by winnie on 2017/12/21.
+ * Created on 2017/12/21.
  */
 
 public class LogHelper {

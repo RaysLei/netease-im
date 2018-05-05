@@ -18,7 +18,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 import com.netease.nimlib.sdk.uinfo.model.UserInfo;
 
 /**
- * Created by winnie on 2018/3/26.
+ * Created on 2018/3/26.
  */
 
 public class RTSHelper {

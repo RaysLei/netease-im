@@ -8,7 +8,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by huangjun on 2017/6/22.
+ * Created on 2017/6/22.
  * <p>
  * <text name="label" width="百分比 | 指定像素"  color="00FFFF"> 文本内容 </text>
  */

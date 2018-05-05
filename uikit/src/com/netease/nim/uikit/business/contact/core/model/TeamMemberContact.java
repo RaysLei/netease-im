@@ -4,7 +4,7 @@ import com.netease.nim.uikit.business.team.helper.TeamHelper;
 import com.netease.nimlib.sdk.team.model.TeamMember;
 
 /**
- * Created by huangjun on 2015/5/5.
+ * Created on 2015/5/5.
  */
 public class TeamMemberContact extends AbsContact {
 

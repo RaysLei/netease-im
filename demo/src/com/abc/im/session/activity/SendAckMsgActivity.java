@@ -16,7 +16,7 @@ import com.netease.nim.uikit.common.activity.UI;
 
 /**
  * 发送已读回执消息界面
- * Created by winnie on 2018/3/14.
+ * Created on 2018/3/14.
  */
 
 public class SendAckMsgActivity extends UI {

@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by winnie on 2017/9/18.
+ * Created on 2017/9/18.
  */
 
 public class WatchPicAndVideoMenuActivity extends UI {

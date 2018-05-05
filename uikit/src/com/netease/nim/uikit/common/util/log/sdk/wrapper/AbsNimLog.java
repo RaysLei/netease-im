@@ -7,7 +7,7 @@ import com.netease.nim.uikit.common.util.log.sdk.LogBase;
 /**
  * 云信日志基类
  * <p>
- * Created by huangjun on 2017/9/20.
+ * Created on 2017/9/20.
  */
 
 public abstract class AbsNimLog {

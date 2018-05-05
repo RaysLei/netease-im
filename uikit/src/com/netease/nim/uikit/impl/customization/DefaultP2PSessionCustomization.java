@@ -12,7 +12,7 @@ import com.netease.nimlib.sdk.msg.attachment.MsgAttachment;
  * 2. 加号展开后的按钮和动作，如自定义消息 <br>
  * 3. ActionBar右侧按钮。
  * <p>
- * Created by hzchenkang on 2016/12/19.
+ * Created on 2016/12/19.
  */
 
 public class DefaultP2PSessionCustomization extends SessionCustomization {

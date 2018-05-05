@@ -12,7 +12,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 import java.io.File;
 
 /**
- * Created by hzxuwen on 2015/6/11.
+ * Created on 2015/6/11.
  */
 public class FileAction extends BaseAction {
 

@@ -8,7 +8,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by liuqijun on 3/24/17.
+ * Created on 3/24/17.
  */
 
 public class ThreadUtils {

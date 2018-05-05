@@ -12,7 +12,7 @@ import com.netease.nim.uikit.common.util.log.LogUtil;
 import java.io.File;
 
 /**
- * Created by huangjun on 2017/4/1.
+ * Created on 2017/4/1.
  */
 public class NIMGlideModule implements GlideModule {
     private static final String TAG = "NIMGlideModule";

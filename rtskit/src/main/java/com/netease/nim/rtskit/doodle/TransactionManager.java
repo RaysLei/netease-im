@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Transaction发包管理器
  * <p/>
- * Created by huangjun on 2015/6/24.
+ * Created on 2015/6/24.
  */
 class TransactionManager {
 

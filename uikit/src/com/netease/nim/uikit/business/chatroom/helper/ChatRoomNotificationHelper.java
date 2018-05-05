@@ -8,7 +8,7 @@ import com.netease.nimlib.sdk.chatroom.model.ChatRoomNotificationAttachment;
 import java.util.List;
 
 /**
- * Created by huangjun on 2016/1/13.
+ * Created on 2016/1/13.
  */
 public class ChatRoomNotificationHelper {
     public static String getNotificationText(ChatRoomNotificationAttachment attachment) {

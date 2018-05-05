@@ -10,7 +10,7 @@ import com.netease.nimlib.sdk.team.model.TeamMember;
 import java.util.List;
 
 /**
- * Created by hzchenkang on 2017/11/1.
+ * Created on 2017/11/1.
  */
 
 public class DefaultTeamProvider implements TeamProvider {

@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 会话界面定制
  * 1. 会话项默认文案定制 
- * Created by huangjun on 2017/9/29.
+ * Created on 2017/9/29.
  */
 
 public class RecentCustomization implements Serializable {

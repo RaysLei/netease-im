@@ -7,7 +7,7 @@ import com.netease.nim.uikit.common.util.log.sdk.NLogImpl;
 /**
  * 云信日志封装
  * <p>
- * Created by huangjun on 2017/9/20.
+ * Created on 2017/9/20.
  */
 public class NimLog extends AbsNimLog {
 

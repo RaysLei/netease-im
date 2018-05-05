@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 自定义通知缓存
  * <p/>
- * Created by huangjun on 2015/5/29.
+ * Created on 2015/5/29.
  */
 public class CustomNotificationCache {
 

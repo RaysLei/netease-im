@@ -17,7 +17,7 @@ import com.netease.nim.uikit.api.wrapper.NimToolBarOptions;
 import com.netease.nimlib.sdk.robot.model.NimRobotInfo;
 
 /**
- * Created by hzchenkang on 2017/6/30.
+ * Created on 2017/6/30.
  */
 
 public class RobotProfileActivity extends UI {

@@ -67,7 +67,7 @@ import static com.netease.nim.avchatkit.teamavchat.module.TeamAVChatItem.TYPE.TY
 
 /**
  * 多人音视频界面：包含音视频通话界面和接受拒绝界面
- * Created by huangjun on 2017/5/3.
+ * Created on 2017/5/3.
  * <p>互动直播/多人会议视频通话流程示例
  * <ol>
  * <li>主播或者管理员创建房间 {@link AVChatManager#createRoom(String, String, AVChatCallback)}。 创建房间仅仅是在服务器预留一个房间名，房间未使用时有效期为30天，使用后的房间在所有用户退出后回收。</li>

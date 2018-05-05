@@ -22,7 +22,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 import java.util.List;
 
 /**
- * Created by vincent on 7/30/14.
+ * Created on 7/30/14.
  */
 public class SearchMessageAdapter extends BaseAdapter {
 

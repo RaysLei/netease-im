@@ -3,7 +3,7 @@ package com.netease.nim.uikit.business.team.model;
 /**
  * 群公告结构(json)
  * <p/>
- * Created by huangjun on 2015/3/24.
+ * Created on 2015/3/24.
  */
 public class Announcement {
     private String id;

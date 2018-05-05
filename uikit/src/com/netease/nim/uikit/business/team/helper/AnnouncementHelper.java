@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.UUID;
 
 /**
- * Created by huangjun on 2015/3/24.
+ * Created on 2015/3/24.
  */
 public class AnnouncementHelper {
     public final static String JSON_KEY_CREATOR = "creator";

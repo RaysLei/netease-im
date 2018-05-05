@@ -72,7 +72,7 @@ import java.util.List;
 
 /**
  * 基于RecyclerView的消息收发模块
- * Created by huangjun on 2016/12/27.
+ * Created on 2016/12/27.
  */
 public class MessageListPanelEx {
 

@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * 群数据源提供者
  * <p/>
- * Created by huangjun on 2015/3/1.
+ * Created on 2015/3/1.
  */
 public class TeamDataProvider {
     public static final List<AbsContactItem> provide(TextQuery query, int itemType) {

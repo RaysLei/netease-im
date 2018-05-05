@@ -8,7 +8,7 @@ import com.netease.nim.avchatkit.common.activity.ToolBarOptions;
 import com.netease.nim.avchatkit.common.activity.UI;
 
 /**
- * Created by liuqijun on 7/19/16.
+ * Created on 7/19/16.
  * 注意:全局配置,不区分用户
  */
 public class AVChatSettingsActivity extends UI {

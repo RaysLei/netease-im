@@ -20,7 +20,7 @@ import com.netease.nim.uikit.common.util.string.StringUtil;
 import java.io.File;
 
 /**
- * Created by zhoujianghua on 2015/7/31.
+ * Created on 2015/7/31.
  */
 public abstract class PickImageAction extends BaseAction {
 

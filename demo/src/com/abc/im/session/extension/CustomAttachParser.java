@@ -6,7 +6,7 @@ import com.netease.nimlib.sdk.msg.attachment.MsgAttachment;
 import com.netease.nimlib.sdk.msg.attachment.MsgAttachmentParser;
 
 /**
- * Created by zhoujianghua on 2015/4/9.
+ * Created on 2015/4/9.
  */
 public class CustomAttachParser implements MsgAttachmentParser {
 

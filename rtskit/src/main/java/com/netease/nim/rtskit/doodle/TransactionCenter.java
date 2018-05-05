@@ -16,7 +16,7 @@ import java.util.Map;
 /**
  * 白板数据收发中心
  * <p/>
- * Created by huangjun on 2015/6/29.
+ * Created on 2015/6/29.
  */
 public class TransactionCenter {
 

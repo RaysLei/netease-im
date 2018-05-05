@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 聊天消息列表辅助类
  * 主要用于某些需求场景下需要往聊天消息列表中手动添加消息、删除消息、或者清空消息列表。
- * Created by huangjun on 2015/7/8.
+ * Created on 2015/7/8.
  */
 public class MessageListPanelHelper {
 

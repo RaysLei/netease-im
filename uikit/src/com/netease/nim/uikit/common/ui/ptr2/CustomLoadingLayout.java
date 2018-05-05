@@ -11,7 +11,7 @@ import com.netease.nim.uikit.R;
 import com.netease.nim.uikit.common.util.sys.ScreenUtil;
 
 /**
- * Created by sunpingji on 15/9/28.
+ * Created on 15/9/28.
  */
 public class CustomLoadingLayout extends LoadingLayout {
 

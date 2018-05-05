@@ -2,7 +2,7 @@ package com.netease.nim.avchatkit.module;
 
 /**
  * 音视频切换接口
- * Created by winnie on 2017/12/12.
+ * Created on 2017/12/12.
  */
 
 public interface AVSwitchListener {

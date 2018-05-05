@@ -7,7 +7,7 @@ import com.netease.nim.uikit.business.robot.parser.elements.element.TextElement;
 import com.netease.nim.uikit.business.robot.parser.elements.group.LinkElement;
 
 /**
- * Created by chenkang on 2017/6/29.
+ * Created on 2017/6/29.
  */
 
 class RobotViewFactory {

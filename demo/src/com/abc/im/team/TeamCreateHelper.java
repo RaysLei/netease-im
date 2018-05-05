@@ -31,7 +31,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by hzxuwen on 2015/9/25.
+ * Created on 2015/9/25.
  */
 public class TeamCreateHelper {
     private static final String TAG = TeamCreateHelper.class.getSimpleName();

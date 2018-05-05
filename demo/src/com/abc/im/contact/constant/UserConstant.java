@@ -1,7 +1,7 @@
 package com.abc.im.contact.constant;
 
 /**
- * Created by hzxuwen on 2015/9/17.
+ * Created on 2015/9/17.
  */
 public class UserConstant {
     public static final int KEY_NICKNAME = 1;

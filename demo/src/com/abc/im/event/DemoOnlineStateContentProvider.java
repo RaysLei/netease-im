@@ -6,7 +6,7 @@ import com.abc.im.DemoCache;
 import com.netease.nim.uikit.api.model.main.OnlineStateContentProvider;
 
 /**
- * Created by hzchenkang on 2017/3/31.
+ * Created on 2017/3/31.
  */
 
 public class DemoOnlineStateContentProvider implements OnlineStateContentProvider {

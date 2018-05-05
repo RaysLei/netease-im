@@ -17,7 +17,7 @@ import com.netease.nimlib.sdk.msg.attachment.FileAttachment;
 import com.netease.nimlib.sdk.msg.constant.AttachStatusEnum;
 
 /**
- * Created by zhoujianghua on 2015/8/6.
+ * Created on 2015/8/6.
  */
 public class MsgViewHolderFile extends MsgViewHolderBase {
     private ImageView fileIcon;

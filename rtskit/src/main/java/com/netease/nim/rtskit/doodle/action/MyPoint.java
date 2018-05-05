@@ -6,7 +6,7 @@ import android.graphics.Paint;
 /**
  * 点
  * <p/>
- * Created by Administrator on 2015/6/24.
+ * Created on 2015/6/24.
  */
 public class MyPoint extends Action {
     public MyPoint(Float x, Float y, Integer color, Integer size) {

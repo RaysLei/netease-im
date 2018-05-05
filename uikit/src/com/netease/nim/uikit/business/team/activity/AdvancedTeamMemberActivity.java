@@ -32,7 +32,7 @@ import java.util.List;
 
 /**
  * 群成员列表界面
- * Created by hzxuwen on 2015/3/17.
+ * Created on 2015/3/17.
  */
 public class AdvancedTeamMemberActivity extends UI implements TAdapterDelegate,
         TeamMemberAdapter.RemoveMemberCallback, TeamMemberAdapter.AddMemberCallback, TeamMemberHolder.TeamMemberHolderEventListener {

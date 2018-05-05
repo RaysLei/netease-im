@@ -18,7 +18,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by hzchenkang on 2017/8/24.
+ * Created on 2017/8/24.
  */
 
 public class ChatRoomMsgViewHolderRobot extends ChatRoomMsgViewHolderText implements RobotContentLinearLayout.ClickableChildView {

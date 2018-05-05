@@ -1,7 +1,7 @@
 package com.netease.nim.uikit.business.robot.parser.elements.base;
 
 /**
- * Created by huangjun on 2017/6/23.
+ * Created on 2017/6/23.
  */
 
 public final class ElementTag {

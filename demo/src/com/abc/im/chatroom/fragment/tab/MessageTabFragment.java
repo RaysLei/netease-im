@@ -10,7 +10,7 @@ import com.netease.nim.uikit.business.chatroom.fragment.ChatRoomMessageFragment;
 
 /**
  * 直播互动基类fragment
- * Created by hzxuwen on 2015/12/14.
+ * Created on 2015/12/14.
  */
 public class MessageTabFragment extends ChatRoomTabFragment {
     private ChatRoomMessageFragment fragment;

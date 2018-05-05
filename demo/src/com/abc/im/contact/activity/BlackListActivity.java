@@ -32,7 +32,7 @@ import java.util.List;
 
 /**
  * 黑名单
- * Created by huangjun on 2015/8/12.
+ * Created on 2015/8/12.
  */
 public class BlackListActivity extends UI implements TAdapterDelegate {
     private static final String TAG = "BlackListActivity";

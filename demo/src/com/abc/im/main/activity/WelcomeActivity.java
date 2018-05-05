@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * 欢迎/导航页（app启动Activity）
  * <p/>
- * Created by huangjun on 2015/2/1.
+ * Created on 2015/2/1.
  */
 public class WelcomeActivity extends UI {
 

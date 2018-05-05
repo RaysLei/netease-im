@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * UIKit缓存数据管理类
  * <p/>
- * Created by huangjun on 2015/10/19.
+ * Created on 2015/10/19.
  */
 public class DataCacheManager {
 

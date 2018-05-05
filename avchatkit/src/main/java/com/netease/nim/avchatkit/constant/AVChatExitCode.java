@@ -1,7 +1,7 @@
 package com.netease.nim.avchatkit.constant;
 
 /**
- * Created by hzxuwen on 2015/4/24.
+ * Created on 2015/4/24.
  */
 public class AVChatExitCode {
     public static final int PEER_HANGUP = 0;

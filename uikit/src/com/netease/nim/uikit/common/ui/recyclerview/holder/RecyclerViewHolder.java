@@ -3,7 +3,7 @@ package com.netease.nim.uikit.common.ui.recyclerview.holder;
 import android.support.v7.widget.RecyclerView;
 
 /**
- * Created by huangjun on 2016/12/11.
+ * Created on 2016/12/11.
  */
 
 public abstract class RecyclerViewHolder<T extends RecyclerView.Adapter, V extends BaseViewHolder, K> {

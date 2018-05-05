@@ -5,7 +5,7 @@ import com.abc.im.DemoCache;
 import com.abc.im.R;
 
 /**
- * Created by huangjun on 2015/7/28.
+ * Created on 2015/7/28.
  */
 public class RTSAttachment extends CustomAttachment {
 

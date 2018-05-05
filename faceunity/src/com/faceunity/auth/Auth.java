@@ -5,7 +5,7 @@ import com.faceunity.utils.ReflectUtils;
 /**
  * FaceUnity授权文件处理，请不要混淆AuthPack类!!!
  * <p>
- * Created by huangjun on 2017/7/17.
+ * Created on 2017/7/17.
  */
 
 public class Auth {

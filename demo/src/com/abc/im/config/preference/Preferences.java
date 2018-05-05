@@ -12,7 +12,7 @@ import java.util.Collections;
 import java.util.Map;
 
 /**
- * Created by hzxuwen on 2015/4/13.
+ * Created on 2015/4/13.
  */
 public class Preferences {
     private static final String KEY_USER_ACCOUNT = "account";

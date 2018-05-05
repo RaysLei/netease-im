@@ -13,7 +13,7 @@ import com.netease.nim.uikit.business.session.viewholder.MsgViewHolderThumbBase;
 import com.netease.nim.uikit.common.ui.recyclerview.adapter.BaseMultiItemFetchLoadAdapter;
 
 /**
- * Created by zhoujianghua on 2015/8/7.
+ * Created on 2015/8/7.
  */
 public class MsgViewHolderSticker extends MsgViewHolderBase {
 

@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * TAB红点提醒管理器
- * Created by huangjun on 2015/3/18.
+ * Created on 2015/3/18.
  */
 public class ReminderManager {
     // callback

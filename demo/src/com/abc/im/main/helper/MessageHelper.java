@@ -13,7 +13,7 @@ import com.netease.nimlib.sdk.msg.model.SystemMessage;
 import com.netease.nimlib.sdk.team.model.Team;
 
 /**
- * Created by huangjun on 2015/4/9.
+ * Created on 2015/4/9.
  */
 public class MessageHelper {
     public static String getName(String account, SessionTypeEnum sessionType) {

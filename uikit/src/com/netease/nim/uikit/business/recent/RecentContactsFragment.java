@@ -57,7 +57,7 @@ import static com.netease.nim.uikit.common.ui.dialog.CustomAlertDialog.onSeparat
 /**
  * 最近联系人列表(会话列表)
  * <p/>
- * Created by huangjun on 2015/2/1.
+ * Created on 2015/2/1.
  */
 public class RecentContactsFragment extends TFragment {
 

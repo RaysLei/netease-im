@@ -6,7 +6,7 @@ import android.graphics.Paint;
 /**
  * 实心圆
  * <p/>
- * Created by huangjun on 2015/6/24.
+ * Created on 2015/6/24.
  */
 public class MyFillCircle extends Action {
     private float radius;

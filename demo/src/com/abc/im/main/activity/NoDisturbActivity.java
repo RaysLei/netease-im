@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by hzxuwen on 2015/7/3.
+ * Created on 2015/7/3.
  */
 public class NoDisturbActivity extends UI implements SettingsAdapter.SwitchChangeListener, View.OnClickListener {
     public static final int NO_DISTURB_REQ = 0x01;

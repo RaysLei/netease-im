@@ -5,7 +5,7 @@ import android.util.Log;
 import com.netease.nim.rtskit.RTSKit;
 
 /**
- * Created by winnie on 2017/12/19.
+ * Created on 2017/12/19.
  */
 
 public class LogUtil {

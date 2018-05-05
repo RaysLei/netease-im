@@ -20,7 +20,7 @@ import com.netease.nimlib.sdk.msg.model.IMMessage;
 import java.io.IOException;
 
 /**
- * Created by hzchenkang on 2017/9/26.
+ * Created on 2017/9/26.
  * <p>
  * 云信sdk 自定义的SDK选项设置
  */

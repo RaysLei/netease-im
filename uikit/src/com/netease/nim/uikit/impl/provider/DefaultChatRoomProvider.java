@@ -9,7 +9,7 @@ import com.netease.nimlib.sdk.chatroom.model.ChatRoomMember;
 import java.util.List;
 
 /**
- * Created by hzchenkang on 2017/11/2.
+ * Created on 2017/11/2.
  */
 
 public class DefaultChatRoomProvider implements ChatRoomProvider {

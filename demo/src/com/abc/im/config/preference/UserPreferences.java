@@ -9,7 +9,7 @@ import com.abc.im.DemoCache;
 import com.netease.nimlib.sdk.StatusBarNotificationConfig;
 
 /**
- * Created by hzxuwen on 2015/4/13.
+ * Created on 2015/4/13.
  */
 public class UserPreferences {
     private final static String KEY_DOWNTIME_TOGGLE = "down_time_toggle";

@@ -5,7 +5,7 @@ import com.netease.nim.uikit.common.ui.recyclerview.adapter.BaseMultiItemFetchLo
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 
 /**
- * Created by zhoujianghua on 2015/8/6.
+ * Created on 2015/8/6.
  */
 public class MsgViewHolderUnknown extends MsgViewHolderBase {
 

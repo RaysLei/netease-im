@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.netease.nim.uikit.common.util.file.FileUtil;
 
 /**
- * Created by zhoujianghua on 2015/7/8.
+ * Created on 2015/7/8.
  */
 public class StickerAttachment extends CustomAttachment {
 

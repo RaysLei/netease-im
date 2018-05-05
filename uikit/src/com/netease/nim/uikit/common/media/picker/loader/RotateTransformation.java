@@ -10,7 +10,7 @@ import com.netease.nim.uikit.common.media.picker.util.BitmapUtil;
 import java.security.MessageDigest;
 
 /**
- * Created by huangjun on 2017/4/11.
+ * Created on 2017/4/11.
  */
 
 class RotateTransformation extends BitmapTransformation {

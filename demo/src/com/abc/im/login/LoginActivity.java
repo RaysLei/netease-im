@@ -61,7 +61,7 @@ import okhttp3.Call;
 /**
  * 登录/注册界面
  * <p/>
- * Created by huangjun on 2015/2/1.
+ * Created on 2015/2/1.
  */
 public class LoginActivity extends UI implements OnKeyListener {
 

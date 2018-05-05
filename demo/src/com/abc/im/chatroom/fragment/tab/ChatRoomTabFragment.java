@@ -9,7 +9,7 @@ import com.abc.im.R;
 import com.netease.nim.uikit.common.fragment.TabFragment;
 
 /**
- * Created by hzxuwen on 2015/12/14.
+ * Created on 2015/12/14.
  */
 public abstract class ChatRoomTabFragment extends TabFragment {
     private boolean loaded = false;

@@ -35,7 +35,7 @@ import java.util.List;
 /**
  * 群列表(通讯录)
  * <p/>
- * Created by huangjun on 2015/4/21.
+ * Created on 2015/4/21.
  */
 public class TeamListActivity extends UI implements AdapterView.OnItemClickListener {
 
